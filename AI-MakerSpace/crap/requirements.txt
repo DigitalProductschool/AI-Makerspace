@@ -1,0 +1,9 @@
+tensorflow
+streamlit
+pillow
+numpy
+requests
+fastapi
+uvicorn
+python-multipart
+#Run this file with - pip3 install -r requirements.txt

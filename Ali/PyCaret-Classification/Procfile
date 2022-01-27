@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-web: sh setup.sh && streamlit run app.py
-=======
 web: sh setup.sh && streamlit run streamlit_app.py
->>>>>>> 52c9040f7d0b8fc9c30b6e14a9af3f149f7b668a

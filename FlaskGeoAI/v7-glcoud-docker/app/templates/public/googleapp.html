@@ -1,0 +1,53 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}Google App Engine{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br /><br />
+        <center><br />
+            <b>Target : </b> https://buildai4sentiment.ew.r.appspot.com/predict?sentence=I like it! <br />
+            <b>Response : </b>{"negative":"0.001336216926574707","positive":"0.9986638","sentence":"I like it!","time_taken":"0.8116645812988281"} <br/>
+            <br />
+            <h4>DOCKER:</h4>
+        </center>
+            <pre>
+                <code>
+                    <small>
+FROM ubuntu:18.04
+# FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+ENV PATH="/root/miniconda3/bin:${PATH}"
+ARG PATH="/root/miniconda3/bin:${PATH}"
+
+RUN apt update \
+    && apt install -y htop python3-dev wget
+
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    && mkdir root/.conda \
+    && sh Miniconda3-latest-Linux-x86_64.sh -b \
+    && rm -f Miniconda3-latest-Linux-x86_64.sh
+
+RUN conda create -y -n ml python=3.7
+
+COPY . src/
+RUN /bin/bash -c "cd src \
+    && source activate ml \
+    && pip install -r requirements.txt"
+
+EXPOSE 8080
+ENTRYPOINT /bin/bash -c "cd src && source activate ml && python app.py"
+                    </small>
+                </code>
+            </pre>
+        <br /><br />
+        files are in /googleapp
+        </div>
+    </div>
+</div>
+
+{% endblock %}

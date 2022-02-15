@@ -1,0 +1,707 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}Input{% endblock %}
+
+{% block main %}
+<!-- Custom CSS here -->
+<link rel='stylesheet' href='{{ url_for('static', filename='css/3userinput.css') }}'>
+
+<!-- Batman login -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+<!-- Font styling -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+<!-- 360 photo -->
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+
+
+<br /><br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6" >
+            <br /><br />
+        <center>
+        <h2 class="ubuntu">User Input</h2>
+        HTML input
+        </center>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6" style="background-color: rgb(255, 255, 255); border: 1px solid;">
+            <br /><br />
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Amartya"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""> &nbsp;
+            <input type="color" name="" value=""/> <br><br>
+            <label>I have read the agreement</label>
+            <input type="checkbox" name="" value="">
+            <input type="submit" name="">
+            <select>
+                <option value="HTML">Select a Language</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React">React</option>
+          </select><br />
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6" style="background-color: rgb(255, 189, 189); border: 1px solid;">
+            <br /><br />
+            <p>Choose your favorite Web language:</p>
+            <form>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+            </form>
+            <input type="email" placeholder="Enter your email" />
+            <input type="password" name="" value="" placeholder="password"/><br />
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6" style="background-color: rgb(215, 241, 255); border: 1px solid;">
+            <br /><br />
+            <input type="file" name="" value=""/><br /><br />
+            <input type="date" name="" value=""/> &nbsp; <input type="time" name="" value=""/><br /><br />
+            <textarea name="" id="texthtml" cols="40" rows="4"></textarea><br /><br />
+        </div>
+    </div>
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6" >
+            <br /><br />
+        <center>
+        <h2 class="ubuntu">User Forms</h2>
+        Bootstrap input
+        </center>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6" style="background-color: rgb(255, 255, 255); border: 1px solid;">
+            <br />
+
+            <form>
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationServer01">First name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationServer02">Last name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationServerUsername">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                      </div>
+                      <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer03">City</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationServer04">State</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Zip</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-outline-danger" type="submit">Submit form</button>
+              </form>
+              <br />
+              <label for="basic-url">Your twitter URL</label>
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://twitter.com/</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">€</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+
+            <br />
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: rgb(255, 255, 255); border: 1px solid;">
+            <br />
+            <div class="row-lg-6 row-md-6 row-sm-6" style="background-color: rgb(255, 255, 255); border-radius: 5px;">
+                
+                <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Address</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Address 2</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+            
+            </div><br /><br />
+            <div class="row-lg-6 row-md-6 row-sm-6" style="background-color: rgb(101, 162, 255); border: 1px dotted; border-radius: 5px; color: white;">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button type="button" class="btn btn-outline-secondary">Action</button>
+                      <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+                  </div>
+            
+            </div>  
+            
+            
+
+
+            <br />
+        </div>
+    </div>
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12" style="background-color: rgb(0, 0, 0); color: white; font-size: 12px; padding: 0; margin: 0; line-height:1;  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; " >
+            <br /><br />
+            <form id="form2">
+                <h1 style="font-family: Roboto; "><img src="{{url_for('static', filename='img/userinput/batman.png')}}" align="middle" height=25px/> </h1>
+                <div class="inset">
+                <p>
+                  <label class="label2" for="email">EMAIL ADDRESS</label>
+                  <input class="input2" type="text" name="email" id="email">
+
+                  <label class="label2" for="password">PASSWORD</label>
+                  <input class="input2" type="password" name="password" id="password">
+
+                  <input class="input2" type="checkbox" name="remember" id="remember">
+                  <label class="label2" for="remember">Remember me for 14 days</label>
+                </p>
+                </div>
+                <p class="p-container">
+                  <span>Forgot password ?</span>
+                  <input class="input2" type="submit" name="go" id="go" value="Log in">
+                </p>
+              </form>
+              <br /><br />
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 happy" style="background-color: gold" >
+            <br /><br />
+            
+<!-- partial:index.partial.html -->
+<div class="content1">
+    <div class="container1">
+        <div class="head1">
+            <div class="heading1"><h1>Share your experience</h1></div>
+            <div class="close1">
+                <div class="s1 s11"></div>
+                <div class="s1 s21"></div>
+            </div>
+        </div>
+        <div class="mid1">
+            <div class="media1"><img class="img1" src="https://cdn-icons-png.flaticon.com/128/3260/3260838.png" alt="angry"></div>
+            <div class="media1"><img class="img1" src="https://cdn-icons-png.flaticon.com/128/42/42901.png" alt="moderate"></div>
+            <div class="media1"><img class="img1" src="https://cdn-icons-png.flaticon.com/128/3260/3260877.png" alt="neutral"></div>
+            <div class="media1"><img class="img1 active1" src="https://cdn-icons-png.flaticon.com/128/569/569501.png" alt="smile"></div>
+            <div class="media1"><img class="img1" src="https://cdn-icons-png.flaticon.com/128/1356/1356639.png" alt="happy"></div>
+        </div>
+        <div class="textarea1">
+            <p>Share your experience</p>
+            <textarea class="textarea12" name="exp" id="exp" placeholder="Let us know..."></textarea>
+        </div>
+        <div class="end1">
+            <div class="submission1">
+                <button class="sub1 btn1">Send</button>
+            </div>
+            <div class="skip1">
+                <button class="skp1 btn1">Skip</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+
+
+            <br /><br />
+        </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-12" style="background-color: rgb(0, 0, 0);  color: aliceblue;" >
+            <br /><br />
+            <h3 class="comforter">Hi! my name is Amartya Saikia</h3>
+            <h5 class="comforter">🧚‍♂️ I am keeping your comments here: </h5>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: rgb(0, 0, 0);  color: aliceblue;">
+                    
+                    <section style="background-color: rgb(204, 211, 218); border-radius: 15px;">
+                        <p class="ubuntu" style="padding: 0px 20px; color: black; font-size: 16px;">Share your comments</p>
+                        <div class="container-fluid pb-cmnt-container">
+                                    <div class="panel panel-info">
+                                        <div class="panel-body">
+                                            <form class="form-inline" action="/input" method="post">
+                                                <textarea type="text" name="name"  style="border-radius: 10px;" cols="40" rows="6"  placeholder="write a comment" class="pb-cmnt-textarea"></textarea>
+                                                <div class="btn-group" style="padding: 10px;">
+                                                    <button class="btn" type="button"><span class="fa fa-picture-o fa-lg"></span></button>
+                                                </div> 
+                                                <a href="#style-8"><button class="btn btn-primary pull-right btn-sm" type="submit" name="submit" value="add">Submit</button></a> &emsp;
+                                            </form>
+                                        </div>
+                                  </div>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6" style="background-color: rgb(0, 0, 0);  color: rgb(0, 0, 0); font-size: 12px;">
+                   
+                    <section style="border-radius: 15px; background-color: rgb(232, 236, 239); height: 200px;">
+                        <div class="container-fluid scrollbar" id="style-8"><br />
+                            {% for l in t %}
+                            <ul class="list-group">
+                                <li class="list-group-item ubuntu">
+                                    {{l['comment']}}
+                                </li>
+                            </ul>
+                            {% endfor %}
+                            <br /></div>
+                    </section>
+
+                </div>
+            </div>
+            <h5 class="comforter">Send me your smile and address:</h5>
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12" style="background-color: rgb(222, 227, 228);  color: rgb(0, 0, 0); padding: 15px;">
+                    <form class="needs-validation" novalidate action="/input" method="post">
+                        <div class="form-row">
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Amartya" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="skk" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername">Username</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                              </div>
+                              <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                              <div class="invalid-feedback">
+                                Please choose a username.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid city.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">State</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid state.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom05">Zip</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid zip.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn-sm btn-outline-primary" type="submit" name="submit2" value="mongo">Submit form</button>
+                      </form>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12" style="background-color: rgb(7, 91, 97);  color: aliceblue;">
+                    wdwdwd
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12" style="background-color: rgb(255, 255, 255);  color: aliceblue; padding: 0;">
+            <div style="border-bottom-right-radius: 100px;" id="panorama"></div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12" style="background-color: rgb(255, 255, 255);  color: aliceblue;">
+            
+            <div id="img-out"></div>
+
+        <div class="add-img-fieldset">
+        <label class="file-input-label" for="img-upload">Upload <span class="fa fa-picture-o fa-lg"></span></label>
+        <input class="file-input" type="file" id="img-upload" accept="image/*" multiple>
+        </div>
+
+        <section class="display-box" id="display-box">
+        <div class="img-panel">
+            <img class="img" src="https://images.unsplash.com/photo-1589882485484-c073e3742e60?auto=format&fit=crop&w=1350&q=80" alt="">
+        </div>
+        
+        <div class="img-panel">
+            <img class="img" src="https://images.unsplash.com/photo-1625654325562-762dcec9e6f2?auto=format&fit=crop&w=1350&q=80">
+        </div>
+        
+        <div class="img-panel">
+            <img class="img" src="https://images.unsplash.com/photo-1639727987123-df946e8d9c6d?auto=format&fit=crop&w=1350&q=80">
+        </div>
+        
+        <div class="img-panel">
+            <img class="img" src="https://images.unsplash.com/photo-1585816738218-1d34c7ab4e23?auto=format&fit=crop&w=1350&q=80">
+        </div>
+        
+        <div class="img-panel">
+            <img class="img" src="https://images.unsplash.com/photo-1552978534-9d01e1f91517?auto=format&fit=crop&w=1347&q=80">
+        </div> 
+        
+        <div class="img-panel">
+            <img class="img" src="https://images.unsplash.com/photo-1627119703136-3964f14b7325?auto=format&fit=crop&w=1351&q=80">
+        </div> 
+            
+        </section>
+        <br /><br />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 ps">
+            
+            <br />
+            <main class="l-app">
+                <header class="l-app__i-header">
+                    <div class="l-app-header">
+                        
+                        <img class="l-app-header__logo logo" src="{{url_for('static', filename='img/cpu.gif')}}" height=60px/>
+                        <div class="l-app-header__body">
+                            <div class="l-project-header">
+                                <div class="l-project-header__i-title">
+                                    <h1>Project Name</h1>
+                                </div>
+                                <div class="l-project-header__i-menu">
+                                    <div class="menubar">
+                                        <div class="button button--menuitem menubar__item">File</div>
+                                        <div class="button button--menuitem menubar__item">Help</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-app-header__button-group">
+                            <button class="button button--large">
+                                <i class="fa fa-share-square-o"></i>
+                            </button>
+                            <button class="button button--large">
+                                <i class="fa fa-user"></i>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <div class="l-app__i-body">
+                    <div class="layout-project">
+                        <div class="layout-project-canvas">
+                            <div class="layout-project-canvas__toolbar">
+                                <section class="toolbar toolbar--vertical toolbar--left">
+                                    <h1 class="hidden">Tools</h1>
+                                    <button class="button button--tool" title="Pointer">
+                                        <i class="fa fa-mouse-pointer"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-hand-paper-o"></i>
+                                    </button>
+                                    <button class="button button--tool">ang</button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-circle-thin"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-square-o"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-star-o"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-pencil"></i>
+                                    </button>
+                                    <button class="button button--tool">line</button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-font"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-crosshairs"></i>
+                                    </button>
+                                </section>
+                            </div>
+                            <div class="layout-project-canvas__sublayout">
+                                <section class="canvas">
+                                    <h2 class="hidden">Canvas</h2>
+                                    <img src="{{url_for('static', filename='img/orb.gif')}}" align="middle" height=150px/>
+                                
+
+                                    <canvas id="canvas"></canvas>
+                                </section>
+                                
+                                <div class="layout-project-canvas__toolbar">
+                                    <section class="toolbar toolbar--horizontal toolbar--bottom">
+                                        <h2 class="hidden">Image View Information</h2>
+                                        <button class="button button--tool" title="Fix To Screen">
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </button>
+                                        <button class="button button--tool">
+                                            <i class="fa fa-search-plus"></i>
+                                        </button>
+                                        <input type="text" class="input-box input-box--default toolbar--vertical-center toolbar__zoom-level" value="100"/>
+                                        <button class="button button--tool" title="Zoom Out">
+                                            <i class="fa fa-search-minus"></i>
+                                        </button>						
+            
+                                        <span class="toolbar--vertical-center toolbar__image-name">image_name.jpg</span>
+            
+                                        <select class="toolbar__color-channel input-box">
+                                            <option>RGB</option>
+                                            <option>Intensity</option>
+                                            <option>Red</option>
+                                            <option>Green</option>
+                                            <option>Blue</option>
+                                        </select>
+                                        
+                                        <span class="toolbar__calibration toolbar--vertical-center">1px = 0.05cm</span>
+                                        
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="layout-project-canvas__toolbar">
+                                <section class="toolbar toolbar--vertical toolbar--right">
+                                    <h1 class="hidden">Advanced Tools</h1>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-info"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-sliders"></i>
+                                    </button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-sun-o"></i>
+                                    </button>
+                                    <button class="button button--tool">cali</button>
+                                    <button class="button button--tool">
+                                        <i class="fa fa-download"></i>
+                                    </button>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="resizer">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                        <div class="panel-group">
+                            <div class="panel-group__panel panel-group__panel--2-3">
+                                <section class="panel">
+                                    <div class="panel__header-layout">
+                                        <div class="panel__title-layout">
+                                            <h2 class="panel__title">Measurements | অসমীয়া</h2>
+                                        </div>
+                                        <button class="button">
+                                            <i class="fa fa-angle-double-down"></i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="fa fa-angle-double-up"></i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+                                    </div>
+                                    <div class="panel__body-layout">
+                                        <div class="annotation-list">
+                                            <div class="annotation-list__item">
+                                                <section class="annotation">
+                                                    <div class="annotation__status-bar">
+                                                        <button class="button button--small">
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="button button--small">
+                                                            <i class="fa fa-lock"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="annotation__info-layout">
+                                                        <div class="annotation__header-layout">
+                                                            <img class="annotation__icon" src="{{url_for('static', filename='img/dps.png')}}" height=30px/>
+                                                            <h3 class="annotation__title">Annotation name</h3>
+                                                            <button class="button">
+                                                                <i class="fa fa-info-circle"></i>
+                                                            </button>
+                                                            <button class="button">
+                                                                <i class="fa fa-angle-down"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="annotation__data-list">
+                                                            <h4>Geometry Data</h4>
+                                                            data<br>data<br>data<br>data<br>data<br>data<br>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="panel-group__panel panel-group__panel--1-3">
+                                <section class="panel">
+                                    <div class="panel__header-layout">
+                                        <div class="panel__title-layout">
+                                            <h2 class="panel__title">Images</h2>
+                                        </div>
+                                        <button class="button">
+                                            <i class="fa fa-plus-square-o"></i>
+                                        </button>
+                                        <button class="button">
+                                            <i class="fa fa-folder-open-o"></i>
+                                        </button>
+                                    </div>
+                                    <div class="panel__body-layout">
+                                        <div class="thumbnail-list">
+                                            <a href="#" class="thumbnail-list__item">
+                                                <img src="https://images.unsplash.com/photo-1589882485484-c073e3742e60?auto=format&fit=crop&w=1350&q=80"/>
+                                            </a>
+                                            <a href="#" class="thumbnail-list__item thumbnail-list__item--active">
+                                                <img src="https://images.unsplash.com/photo-1625654325562-762dcec9e6f2?auto=format&fit=crop&w=1350&q=80"/>
+                                            </a>
+                                            <a href="#" class="thumbnail-list__item">
+                                                <img src="https://images.unsplash.com/photo-1639727987123-df946e8d9c6d?auto=format&fit=crop&w=1350&q=80"/>
+                                            </a>
+                                            <a href="#" class="thumbnail-list__item">
+                                                <img src="https://images.unsplash.com/photo-1585816738218-1d34c7ab4e23?auto=format&fit=crop&w=1350&q=80"/>
+                                            </a>
+                                            <a href="#" class="thumbnail-list__item">
+                                                <img src="https://images.unsplash.com/photo-1552978534-9d01e1f91517?auto=format&fit=crop&w=1347&q=80"/>
+                                            </a>
+                                            <a href="#" class="thumbnail-list__item">
+                                                <img src="https://images.unsplash.com/photo-1627119703136-3964f14b7325?auto=format&fit=crop&w=1351&q=80"/>
+                                            </a>
+                                        </div>
+                                        <br /><br /><br />
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src='{{ url_for('static', filename='js/3userinput.js') }}'></script> 
+{% endblock %}

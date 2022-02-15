@@ -1,0 +1,23 @@
+#map { 
+    position: relative; 
+    top: 0; 
+    bottom: 0; 
+    width: 99.95%; 
+    height: 450px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.maplibregl-ctrl-bottom-right{
+    display: none;
+    visibility: hidden;
+} 
+.mapboxgl-ctrl-bottom-right {
+    display: none;
+    visibility: hidden;
+}
+
+.mapboxgl-ctrl-logo{
+    display: none;
+    visibility: hidden;
+}

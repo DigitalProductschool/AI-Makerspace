@@ -1,0 +1,63 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %} DS|DL {% endblock %}
+
+{% block main %}
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+<!-- Custom CSS here -->
+<link rel="stylesheet" href={{url_for('static' , filename = 'css/6dsdl/normalize.css')}}>
+<link rel="stylesheet" href={{url_for('static' , filename = 'css/6dsdl/grid.css')}}>
+<link rel='stylesheet' href={{url_for('static' , filename = 'css/6dsdl/style.css')}}>
+<link rel='stylesheet' href={{url_for('static' , filename = 'css/6dl.css')}}>
+
+<div class="bg-img">
+	<div class="content">
+        <div class = "index-main">
+
+        <div style = "width : 100%; padding-top : 5%;">
+            <div class = "header-content">
+                 <h1 style = "text-align: center;color: rgb(87, 1, 1)"><span class="header-content-text">Image Classification Model</span></h1>
+            </div>
+        </div>
+
+        <div class="upload-section">
+
+            <div class="upload-file">
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="file-form-input" type="file" , name = "file"/>
+                    <button class="btn btn-outline-info btn-lg">Upload</button> 
+                </form>
+            </div>
+
+            <div class="uploadOR">
+                <span>OR</span>
+            </div>
+
+            <div class="upload-link">
+                <form class = "link-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="link-form-input" type="text" ,maxlength="1000" , name = "link" placeholder="Paste the image URL(not the site address)"/>
+                    <button class="btn btn-outline-info btn-lg">Proceed</button> 
+                </form>
+            </div>
+            <div class = "header-content-sub">
+                    <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            </div>
+        </div>
+
+        <div class = "footer">
+            <div class = "header-content-sub">
+                    <p style = "text-align: center;color: rgb(0, 0, 0)" class="header-content-info">The model was trained on CIFAR-10 dataset and the model only performs better when the following image categories are provided as input</p>
+            </div>
+            <div class = "header-content-sub">
+                    <p style = "text-align: center;color:rgb(5, 144, 209)" class="header-content-info">dog , cat , horse , deer , frog , airplane , truck , automobile , ship , bird</p>
+            </div>
+        </div>
+	     </div>  
+	</div>			 
+	</div>	 
+
+{% endblock %}
+
+

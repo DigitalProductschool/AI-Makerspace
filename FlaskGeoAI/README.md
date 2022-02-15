@@ -3,7 +3,7 @@
 Let's go digital with this quick workshop on rapid prototyping on geo ai problem statements. I will walk you through on making digital product with a 'Flask' backend from nothing to building powerful end to end web applications.
 <p class="ex1" align="justify">  <br />
 We will walk through 7 phases of this workshop:<br />
-✣ <b>1 | Basic Flask server : </b> We will host a basic Flask server in Heroku and we will go digital. We are all have a digital presence and have a basic web-application running in a web address. <br />
+✣ <b>1 | Basic Flask server : </b> We will host a basic Flask server in Heroku and we will go digital. We will all have a digital presence and have a basic web-application running in a web address. <br />
 ✣ <b>2 | Design, UI and Responsive : </b> We will add cool designs and UI in our web-application keeping User eXperience (UX) in mind. We will now have a cooler presence online. <br />
 ✣ <b>3 | User Input & Databases : </b>  We will interact with users and take their input in with different forms. We will also learn how to store the data in databases such as Firebase, MongoDb etc. <br />
 ✣ <b>4 | Mapbox Map & Mongodb: </b> We will learn to add a map in our webapplication and fetch data to display in map from Mongodb database. We will learn on how to add responsive designs, markers, 3D objects, 3D buildings, live traffic, API data or geojson data over map. <br />

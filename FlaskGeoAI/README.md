@@ -32,3 +32,5 @@ firebase credentials in 'v7-glcoud-docker/app/views.py' and './v7-glcoud-docker/
 
 author: @[s-ai-kia](https://github.com/s-ai-kia/)
 
+
+Apart from the functionalities mentined for Geo AI in this repository, several other geo frameworks can be integrated such as Google Earth Engine Code Editor outputs maps with access to proper satellite data (SAR, NDVI maps) such as COPERNICUS Sentinel, Jaxa ALOS etc.

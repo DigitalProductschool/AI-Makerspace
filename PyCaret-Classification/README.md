@@ -1,5 +1,5 @@
 # Introduction to PyCaret
-This AI-Makerspace workshop introduces PyCaret, an open-source low-code machine learning library in Python that automates machine learning workflows. The directory contains all the necessary files that you are going to need to practice this workshop on your own. You can start from opening `LoanClassification.ipynb` where you will find a button `Open in Colab` to open the notebook in Google Colab, the IDE used in the workshop.
+This AI-Makerspace workshop introduces PyCaret, an open-source low-code machine learning library in Python that automates machine learning workflows. The directory contains all the necessary files that you are going to need to practice this workshop on your own. You can start from opening `LoanClassification.ipynb` where you will find a button <a href='https://colab.research.google.com/github/alihussainia/AI-Makerspace/blob/master/PyCaret-Classification/LoanClassification.ipynb'>`Open in Colab`</a> to open the notebook in Google Colab, the IDE used in the workshop.
 
 ### Dataset
 The `Bank Loan Classification` dataset used during the workshop is taken from Kaggle and can be found <a href='https://www.kaggle.com/sriharipramod/bank-loan-classification'>`here`</a>.

@@ -44,6 +44,15 @@ ENTRYPOINT /bin/bash -c "cd src && source activate ml && python app.py"
                     </small>
                 </code>
             </pre>
+            $ docker build -f Dockerfile -t sentiment:dev . <br/>
+            $ docker run -p 8080:8080 -t sentiment:dev . <br/>
+            $ curl -X GET 'http://127.0.0.1:5000/googlevm?lat=53.536094&lon=10.029404&zip=20539' <br/> <br/>
+
+            Install gcloud SDK <br/> <br/>
+
+            $ gcloud init <br/>
+            $ gcloud config set app/cloud_build_timeout 3000 <br/>
+            $ gcloud app deploy --log-http <br/>
         <br /><br />
         files are in /googleapp
         </div>

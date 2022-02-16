@@ -30,7 +30,8 @@ firebase credentials in 'v7-glcoud-docker/app/views.py' and './v7-glcoud-docker/
 ```
 <img src="./final.gif" width=100%> 
 
-author: @[s-ai-kia](https://github.com/s-ai-kia/)
+author: @[s-ai-kia](https://github.com/s-ai-kia/) | [live](https://aimakerspacev1.herokuapp.com/)
+
 
 
 Apart from the functionalities mentioned for Geo AI in this repository, several other geo frameworks can be integrated such as Google Earth Engine Code Editor outputs maps with access to proper satellite data (SAR, NDVI maps) such as COPERNICUS Sentinel, Jaxa ALOS etc. Also '[geemap](https://github.com/giswqs/geemap)' backend in Python makes integration in Flask easier.

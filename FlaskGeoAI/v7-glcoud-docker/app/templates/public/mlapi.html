@@ -32,13 +32,22 @@
                     import certifi
                     client = pymongo.MongoClient(uri, tlsCAFile=certifi.where())
 
-                    str1 = "http://21.62.46.94:5000/loc?lat="
+                    str1 = "http://127.0.0.1:5000/googlevm?lat="
                     api_url = str1+str(lat)+"&lon="+str(lon)+"&zip="+str(zip)
                     data = requests.get(api_url).json()
                     final_index = dict(data)['final_index']
                     loc_class = dict(data)['loc_class']
-
-                    collection2.insert_many(indvpos_final)
+                    
+                    collection2.insert_many(myList)
+                    collection2.insert_one(record)
+                    
+                    $ sudo ufw enable
+                    $ sudo ufw allow
+                    $ sudo ufw disable
+                    $ sudo ufw status
+                    $ ssh vmname@ip
+                    $ scp -r flaskfolder/* vmname@ip:~/
+                    $ nohup python3 app.py &
                 </small>
             </code>
         </pre>

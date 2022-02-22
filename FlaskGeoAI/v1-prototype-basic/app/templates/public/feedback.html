@@ -1,0 +1,21 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br /><br />
+        <center><br />
+        <img src="{{url_for('static', filename='img/feedback.png')}}" align="middle" height=150px/>
+        <h4>Thank You for your Feedback</h4>
+        </center>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

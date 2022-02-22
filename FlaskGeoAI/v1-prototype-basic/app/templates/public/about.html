@@ -1,0 +1,20 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}About{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <br/><br/>
+        <h1>About Us</h1>
+        <img src="{{url_for('static', filename='img/amartya.png')}}" align="middle" height=350px/>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}

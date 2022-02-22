@@ -1,0 +1,175 @@
+/* hide mapbox & openstreet map logo from display  */
+
+.maplibregl-ctrl-bottom-right{
+    display: none;
+    visibility: hidden;
+} 
+.mapboxgl-ctrl-bottom-right {
+    display: none;
+    visibility: hidden;
+}
+
+.mapboxgl-ctrl-logo{
+    display: none;
+    visibility: hidden;
+}
+
+/* Buttons in Ebenen  */
+
+.btn11 {
+    background-color: rgb(240, 232, 232);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+  /* Darker background on mouse-over */
+.btn11:hover {
+    background-color: rgb(243, 138, 138);
+}
+
+.marker {
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background-image: url(static/traffic.png);
+    background-color: rgba(0, 0, 0, 0);
+    transform: translate(28px, 56px, 0);
+}
+
+/* Mapbox Nav placement  */
+
+.mapboxgl-ctrl-top-center {
+    bottom: 177px;
+    right: 15px;
+    position:absolute; 
+    pointer-events:none; 
+    z-index:2;
+  }
+
+  @media (max-width: 700px) {
+    .mapboxgl-ctrl-top-center {
+        bottom: 143px;
+        right: 15px;
+        position:absolute; 
+        pointer-events:none; 
+        z-index:2;
+      }
+  }
+  
+  .mapboxgl-ctrl-top-center .mapboxgl-ctrl { 
+    margin:10px 0 0 10px;  
+  }
+
+  .mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+/* Weather API card  */
+
+#weather {
+    position: fixed;
+    top: 95px;
+    right: 10px;
+    height: 8rem;
+    width: 13rem;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    z-index: -80;
+}
+
+/* Mapbox style selection menu  */
+
+#menu2 {
+    position: fixed;
+    margin-bottom: 1px;
+    margin-left : 1px;
+    background: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    margin-top: 1px;
+    padding: 2px;
+}
+
+/* + button on lower screensize  */
+
+@media (min-width: 558px) {
+    .buttoncollapse {
+        position: sticky;
+        bottom: 105px;
+        left: 10px;
+        display: none;
+    }
+}
+
+/* Information Cards on Index page  */
+
+.blueK{
+    position: fixed;
+    margin-bottom: 1px;
+    margin-right : 1px;
+    bottom: 12px;
+    right: 10px;
+    padding: 2px;
+    width: 13.6rem; max-width: 18rem; height:9rem; max-height: 12rem;
+    font-size: 17px;
+}
+
+.blueK2{
+    position: fixed;
+    margin-bottom: 1px;
+    margin-right : 1px;
+    bottom: 165px;
+    right: 57px;
+    padding: 2px;
+    width: 10.6rem; max-width: 15rem; height:6rem; max-height: 12rem;
+    font-size: 17px;
+}
+
+
+.blueK3{
+    position: fixed;
+    margin-bottom: 1px;
+    margin-right : 1px;
+    bottom: 267px;
+    right: 11px;
+    padding: 2px;
+    width: 13.5rem; max-width: 15rem; height:8rem; max-height: 45rem;
+    font-size: 17px;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .blueK{
+        width: 8rem;
+        height: 6rem;
+        font-size: 8px;
+        bottom: 25px;
+    }
+
+    .blueK2{
+        width: 5.5rem;
+        height: 4rem;
+        bottom: 130px;
+        right:50px;
+        font-size: 8px;
+    }
+
+    .blueK3{
+        position: fixed;
+        margin-bottom: 1px;
+        margin-right : 1px;
+        bottom: 245px;
+        right: 11px;
+        padding: 2px;
+        width: 8rem; max-width: 30rem; height:5rem; max-height: 30rem;
+        font-size: 8px;
+        display: none;
+    }
+  }
+

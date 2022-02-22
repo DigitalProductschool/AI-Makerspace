@@ -1,0 +1,15 @@
+{
+  "type": "service_account",
+  "project_id": "buildai-hamburg",
+  "private_key_id": "yourid",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvyouridcnIQ2E3\nrsYf/LuhdYiempY67/pqqF+W8lZXUZBadcyouridplease5SFGxh84FypD7\nzrUkJh876KSfIslhJuXGGH3C28VilOhe+Fxn3BqJAMyJdSTcJW/Kp0fMnHfaPNQD\nv9/VqFrRx+tnL7gC0EWT6EU8Eezdj1Bhtw0EmfQAxk1rE1E+tu2ks39BkchYRzm4\nQDECxRtqpb+DELX14YbxbJkRZkyctRBmT1jrAvtV7vUadCyrXFE20btB5G85aMYd\nMtiuSZuSrxJKFQglCxAyDhU9HW74TMtp3Vr0dN5SRr6oMFAu0Mm4wOy27LvTEySw\n73CR7htNAgMBAAECggEAAtfQmBMukASlrzdkeuKoOzz1vUexT7gZmeH9EvSpqs+p\nUxS/urNwM5BsHm2XUBeruxWHmJ34aPNtV0ugU624pnIXcxIUmwf/2xTOfx1mhXW4\nvJnDxp/H0tttyyJATpnPBoacHwU7/WMZevNOLdrZh0i2khDUm0p8/+HAi0PVa7Y+\nJDWHgYuHwS63F4cWdpf5YFh6yp1T7Yd8Nx/a/6msb5UkWCOG+4SoLIV3WveRFsfz\na4kiwXR6QYCpYFAwxXqnbTLDcR0O4cOXaQnENvVOjjr8Frj/hB6TvWifWLqOmA7U\nbA7l/0PMT8uZGJ4F5rrgvu7p5JcEXN89X7hyDSty0QKBgQD/uRvqzr6cce2x+IAM\nvdtUoxXS+PaAhbaTKdn/9rUjXe3L87312TgcuFv6Pj0QcWC9XyqhP7Jm3SKZEbly\ng90VmMDY/HMYmFijbml2ugCCtGap8QGijSy0PCaLI3voLBCU6ebMeXy/R2f9LhPO\nfZQpuM+pKybB49cOD1/Hec2KmQKBgQC4xRd3JPvaOupJ+7jtmjuW5YD7gcLUeZOh\ntdCKr9ah4/9bFJ4puJW2gjC7Hf159Q0DqElJlnYO1aIq2AXlOMKVznQhEPMNIgVQ\nS9dkj1nUpJSoU7pz5C0CEPJhDl7gijGxpYpCXJcadEKSQSZkVqJSMfx3RxKzFYA9\n8qEW3rBa1QKBgQCTvncKqngmGwyhjlktA2P8+lxZj82bY6WgUMXKxNbSoCoLc7+E\nkwOAVGOPqPXO0jJ6NsmCcDK6i3i5xyvFpbnOCHsi4nf89cgAZII6PiydV20ZMk0n\nhTkWyMncCZxE/3B1GM5nxKj2OmMyO7Tl0FgR4tzXeD7kNqbBUNCdhxnhwQKBgBA1\nUeKkvucc5fKJf2ZwcivBhDgL4QBsjdPQtDOGS0i2TG879sfoJlH1R7sSXWr2YSbh\n+1PWPBL/EJO7kYDTItarXqqL5xZO1rJ9hK6QmKu7qEK/3YpPCNe2jtyOuyntVYCk\n6eT6ZFLwweo8htakdubI9cGs3WoSR8anYxQzgrrlAoGAHb88r8DuUsQOFodgpBN6\nyaDhj7RhV38ULopvU8Iq3zviPQ9Wq3hHX7jbUxa03hjBZPGu006fyQO1Kt/QtceT\nNJcdSHheQRahmU17O4RrQWU20nNMA+yz4C1TUBOPex5vmMJTBazaFT+uctUJwEoC\n8TzlveMPbWHKrmoYJYJZxds=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-yourid@buildai-hamburg.iam.gserviceaccount.com",
+  "client_id": "yourid",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-zg6ks%40buildai-hamburg.iam.gserviceaccount.com"
+}
+
+
+/*get your credentials from firebase*/

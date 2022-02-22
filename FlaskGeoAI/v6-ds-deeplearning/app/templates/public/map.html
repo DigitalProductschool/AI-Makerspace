@@ -1,0 +1,206 @@
+{% extends 'public/templates/public_template_map.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}Map{% endblock %}
+
+{% block main %}
+
+<link rel='stylesheet' href='{{ url_for('static', filename='css/4index.css') }}'>
+<link rel='stylesheet' href='{{ url_for('static', filename='css/4dropdown.css') }}'>
+
+<!-- Responsive button on smaller screen -->
+<div class="buttoncollapse">
+  &nbsp; <button id="hideshow" class="kc_fab_main_btn">+</button>
+</div>
+
+<!-- Dropdown Section -->
+<section style="height: 120px;" style="background-color: blue; padding: 0; margin: 0;">
+    <div class='container-fluid'>
+        <div id="filter" class="row"> 
+
+            <!-- Suchfilter Dropdown -->
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div dir="ltr" style="border-color: rgb(21, 75, 252);">
+                    <details>
+                      <summary>
+                        <span data-css-icon="down" style="font-size: larger"><b class="fas fa-map-marker-alt" style="color:crimson"></b> Suchfilter<i></i></span>
+                      </summary>
+                      <div>
+                        <div class="dropdown">
+                          <button style="width: 95%; border-color:blue;" class="btn btn-secondary-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Vorlage Auswählen
+                          </button>
+                        </div>
+
+                        <form action="mailto:ar5saikia@gmail.com" method="post" enctype="text/plain">
+                          <h6>Datum:</h6>
+                          <input style="border-radius: 5px; max-width: 100px; font-size: smaller;" type="date" name="date1" value="" id="dateselected1"> - <input style="border-radius: 5px; max-width: 100px; font-size: smaller;" type="date" name="date2" value="" id="dateselected2"> <br/><br/>
+                          <input type="checkbox" name="" value="">Mo <input type="checkbox" name="" value="">Di <input type="checkbox" name="" value=""> Mi <input type="checkbox" name="" value="">Do <input type="checkbox" name="" value="">Fr <input type="checkbox" name="" value="">Sa <br /><br />
+                          <h6>Uhrzeit:</h6>
+                          <input type="radio" name="timeselect" value="1" checked> 6:00 - 9:00 Uhr <br />
+                          <input type="radio" name="timeselect" value="2"> 16:00 - 19:00 Uhr <br />
+                          <input type="radio" name="timeselect" value="3"> individuell <br /> <br /> 
+                          <input style="border-radius: 5px; font-size: small;" type="time" name="time1" value="" id="timeselected1"> - <input style="border-radius: 5px; font-size: small;" type="time" name="time2" value="" id="timeselected2"><br /><br />
+                          <button id="loaddata" type="button" class="btn btn-outline-danger btn-sm" style="width: 95%;">SUCHEN</button>
+                      </form> <br />
+
+                      </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Bezirk Dropdown -->
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div dir="ltr">
+                    <details>
+                      <summary>
+                        <span data-css-icon="down" style="font-size: larger"><b class="fas fa-city" style="color:crimson"></b>Bezirk<i></i></span>
+                      </summary>
+                      <div>
+                        <select id="bezirkeham" class="custom-select custom-select-sm">
+                          <option value="1" selected>Altona</option>
+                          <option value="2"> <b>Hamburg-Mitte</b></option>
+                          <option value="3">Harburg</option>
+                          <option value="4">Eimsbüttel</option>
+                          <option value="5">Hamburg-Nord</option>
+                          <option value="6">Wandsbek</option>
+                          <option value="7">Bergedorf</option>
+                        </select>
+                        <button type="button" id="bezirk" class="btn btn-outline-danger btn-sm" style="width: 99%;">Forkussieren</button>
+                        
+                      </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Ebenen Dropdown -->
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div dir="ltr">
+                    <details>
+                      <summary>
+                        <span data-css-icon="down" style="font-size: larger"><b class="fas fa-layer-group" style="color:crimson"></b> Ebenen <i></i></span>
+                      </summary>
+                      
+                      <div>
+                        <button type="submit" id='points_signal' name="submit_a" value="submit_a" class="btn11" style="height: 50px; width:50px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;" class="fas fa-traffic-light fa-2x"></i></button> &nbsp;
+                        <button class="btn11" id="smala2" style="height: 50px; width:50px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;" class="fas fa-truck fa-2x"></i><a id="smala" href="#" style="color: red;">smala</a></button> &nbsp;
+                        <button type="submit" id="traffi" class="btn11" style="height: 50px; width:50px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;"  class="fas fa-car fa-2x"></i><a id="traffic" href="#" style="color: red;">traffic</a></button>
+                        <button class="btn11" id="temp22" style="height: 50px; width:50px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;" class="fas fa-cloud-sun fa-2x"></i><a id="temptemp" href="#" style="color: red;">temp</a></button><br /><br />
+                      
+                      <button type="submit" id='osm3d' class="btn11" style="height: 50px; width:50px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;" class="far fa-building fa-2x"></i></button> &nbsp;
+                      <button type="submit" id='roads2' class="btn11" style="height: 50px; width:50px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;" class="fas fa-road fa-2x"></i></button> 
+                      
+                      </div>
+                      <br />
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mapbox Map -->
+<div id="map2"></div>
+
+<!-- Weather API card -->
+<div id="weather" class="card" style="display:none;">
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">Weather Daily : <i class="fas fa-cloud-moon"></i></h6>
+    <small><p id="temp2" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+    <small><p id="feels" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+    <small><p id="wind" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+    <small><p id="desc2" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+  </div>
+</div>
+
+<!-- Load Hamburg Stadtteil button -->
+<button type="submit" id="bezirke22" class="btn11" style="position: fixed; height: 40px; width:40px; border-radius: 9px; padding: 10px; margin: 10px; bottom: 30px;">
+  <i style="color: rgb(179, 35, 35); " class="fas fa-map-marked-alt fa-2x"></i>
+</button>
+
+<!-- Load Mapbox styles -->
+<div id="menu2">
+  <input id="light-v10" type="radio" name="rtoggle" value="light" checked="checked">
+  <label for="light-v10">light</label>
+    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" >
+    <label for="streets-v11">satellite</label>
+    <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+    <label for="dark-v10">dark</label>
+    <input id="streets-v11" type="radio" name="rtoggle" value="streets-v11">
+    <label for="streets-v11">streets</label>
+    <input id="navigation-day-v1" type="radio" name="rtoggle" value="navigation-day-v1">
+    <label for="navigation-day-v1">navigation</label>
+</div>
+
+<!-- Click Marker and Show Pie Chart -->
+<div id="demo3" class="card border-primary mb-3 blueK3">
+  <div class="card-header" style="padding: 0.5px; margin: 0.5px; padding-left: 4px;"><b><p class="card-title" style="color: rgb(45, 120, 231); padding: 0.5px; margin: 0.5px;">Details zum Hotspot <i class="fas fa-info-circle" style="color: rgb(145, 191, 229);"></i></p></b></div>
+  <div class="card-body text-primary" style="margin: 4px; padding: 4px;">
+    <p class="card-text" style="margin: 0px; padding: 0px;">
+      <div class="container-fluid">
+          <div class="row" id="graphing">
+            <div id="contentdynamic">
+            <small id="clicktext">Klicke mit der Maus auf einen Hotspot auf der Karte (<i class="fas fa-map-marker-alt"></i>), um details angezeigt zu bekommen.</small> </div>
+          </div>
+      </div>
+    </p>
+  </div>
+</div>
+
+<!-- Show date and time upon selection -->
+<div id="demo2" class="card border-primary mb-3 blueK2">
+  <div class="card-header" style="padding: 0.5px; margin: 0.5px; padding-left: 4px;"><b><p class="card-title" style="color: rgb(45, 120, 231); padding: 0.5px; margin: 0.5px;">Zeitraum <i class="fas fa-info-circle" style="color: rgb(145, 191, 229);"></i></p></b></div>
+  <div class="card-body text-primary" style="margin: 4px; padding: 4px;">
+    <p class="card-text" style="margin: 0px; padding: 0px;">
+      <div class="container-fluid">
+          <div id="zeitraumreplace" class="row" >
+            <small id="zeitraumcontentsmall"> <div id="zeitraumcontent">
+              Wähler einen Zeitraum im Suchfilter
+            </div></small>
+          </div>
+      </div>
+    </p>
+  </div>
+</div>
+
+<!-- Show range & class of number of vehicles -->
+<div id="demo1" class="card border-primary mb-3 blueK">
+    <div class="card-header" style="padding: 2px; margin: 2px;"><b><p class="card-title" style="color: rgb(45, 120, 231); padding: 1px; margin: 1px;">Anzahl an Autos <i class="fas fa-info-circle" style="color: rgb(145, 191, 229);"></i></p></b></div>
+    <div class="card-body text-primary" style="margin: 4px; padding: 4px;">
+      <p class="card-text" style="margin: 0px; padding: 0px;">
+        <div class="container-fluid">
+            <div class="row blueT">
+              <table class="table table-bordered table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"><small>4 - 9</small> </th>
+                    <th scope="col"><small>10 - 14</small></th>
+                    <th scope="col"><small>15 - ∞</small></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b class="fas fa-map-marker-alt fa-2x" style="color:rgb(228, 235, 236)"></b></td>
+                    <td><b class="fas fa-map-marker-alt fa-2x" style="color:rgb(43, 89, 175)"></b></td>
+                    <td><b class="fas fa-map-marker-alt fa-2x" style="color:crimson"></b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </p>
+    </div>
+  </div>
+
+<!-- Load JavaScript Functionalities -->
+<script src='{{ url_for('static', filename='js/4map/security.js') }}'></script>
+<script src='{{ url_for('static', filename='js/4map/hamburg.js') }}'></script> 
+<script src='{{ url_for('static', filename='js/4map/traffic-layers.js') }}'></script>
+<script src='{{ url_for('static', filename='js/4map/mapindex.js') }}'></script>
+<script src='{{ url_for('static', filename='js/4map/loaddata.js') }}'></script>
+<script src='{{ url_for('static', filename='js/4map/buttonsquery.js') }}'></script> 
+<script src='{{ url_for('static', filename='js/4map/bezirke.js') }}'></script> 
+<script src='{{ url_for('static', filename='js/4map/dropdown.js') }}'></script> 
+<script src='{{ url_for('static', filename='js/4map/loaddatagraph.js') }}'></script>
+{% endblock %}

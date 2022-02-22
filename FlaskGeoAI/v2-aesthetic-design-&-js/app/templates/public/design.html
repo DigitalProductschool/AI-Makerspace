@@ -1,0 +1,360 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}Design{% endblock %}
+
+{% block main %}
+
+<!-- Custom Font here -->
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Syne+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+<!-- Custom CSS here -->
+<link rel='stylesheet' href='{{ url_for('static', filename='css/2aesthetic.css') }}'>
+
+<!-- LOAD THE MATHJAX LIBRARY -->
+<!-- DOCS: https://docs.mathjax.org/en/latest/basic/mathematics.html -->
+<!-- DEMO: https://github.com/mathjax/MathJax-demos-web -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<!-- Graph CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+<!-- Card Design 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-3 col-sm-6" style="background-color: rgb(255, 255, 255); border: 1px solid;">
+            <br/><br/>
+
+        
+        <div style="overflow-x:auto; text-align: center;" class="css_skk_3">
+            <div style="padding-top: 50px;">
+            <img class="cloud-top-1" src='{{ url_for('static', filename='img/designs/cloud.png') }}'>
+            <img class="cloud-top-2" src='{{ url_for('static', filename='img/designs/cloud.png') }}'>
+            <h1 class="css-ai-h1">I am Amartya 👨🏻‍🚀</h1>
+            <p class="css-ai-p">a Python Developer.</p>
+            </div>
+        </div> 
+        <br />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: rgb(16, 17, 13); border: 1px solid;">
+            <p class="css-ai-p">Write LaTeX mathematical equations:</p> <br />
+
+           
+            <!-- TEX -->
+            <p style="color: aliceblue;"> $$\sum_{i=1}^nc=cn$$</p>
+
+            <p style="color: aliceblue;">\[
+                \frac{1}{(\sqrt{\phi \sqrt{5}}-\phi) e^{\frac25 \pi}} =
+                  1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+                   {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+             \]</p>
+             <br /><br />
+             <p class="css-ai-p"> Symbols > &pi; &prod; &notin; &empty; &forall; &exist; &infin;</p>
+
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="border: 7px solid; background-image: url({{ url_for('static', filename='img/designs/weather.gif') }}); background-clip: border-box;">
+
+            <!-- Weather API card -->
+            <br />
+            <button class="btn11" id="temp22" style="height: 60px; width:60px; border-radius: 9px;"><i style="color:crimson; border-radius:3px; border-color:crimson;" class="fas fa-cloud-sun fa-3x"></i></button>
+            <br />
+            <div id="weather" class="card" style="display:none; color: yellow;">
+                <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Weather Daily : <i class="fas fa-cloud-moon"></i></h6>
+                <small><p id="temp2" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+                <small><p id="feels" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+                <small><p id="wind" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+                <small><p id="desc2" class="card-text" style="margin : 0; padding-top:0; padding-bottom:0;"></p></small>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<br /><br />
+
+<div class="container">
+    <div class="row">
+        𓀀 𓀁 𓀂 𓀃 𓀄 𓀅 𓀆 𓀇 𓀈 𓀉 𓀊 𓀋 𓀌 𓀍 𓀎 𓀏 𓀐 𓀑 𓀒 𓀓 𓀔 𓀕 𓀖 𓀗 𓀘 𓀙 𓀚 𓀛 𓀜 𓀝
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: rgb(255, 179, 179); border: 1px solid;">
+                One of Four columns
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: rgb(210, 240, 149); border: 1px solid;">
+                Two of Four columns
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: rgb(168, 210, 238); border: 1px solid;">
+                Three of Four columns
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: rgb(255, 253, 144); border: 1px solid;">
+                Four of Four columns
+            </div>
+    </div>
+</div>
+<br /><br />
+
+<section id="title">
+    <div class="container-fluid fluid1">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark font2 navpad">
+        <a class="navbar-brand font21" href="#">X&lt;dev&gt;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">HTML</a> 
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">CSS</a> 
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">JavaScript</a> 
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="row font2">
+        <div class="col-lg-6 col-md-6 col-sm-12" style="padding-bottom: 20px;">
+            <h1 style="color: azure;">Meet new and interesting coders nearby.</h1><br />
+            <button type="button" class="btn btn-dark btn-lg"> <img src="{{url_for('static', filename='img/designs/gplay.png')}}" align="middle" alt="iphone-mockup" height=20px> Download</button><br /><br />
+            <button type="button" class="btn btn-outline-light btn-lg"><i class="fab fa-apple"></i> Download</button>
+        </div><br /><br />
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <img class="title-image" src="{{url_for('static', filename='img/designs/iphone6.png')}}" align="middle" alt="iphone-mockup"/>
+        </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="container-fluid fluid1">
+        <div class="row" style="text-align: center;">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <i class="icon far fa-check-circle fa-4x"></i><br />
+                <h4 class="font2">Easy to use.</h4>
+                <p style="color: grey;">So easy to use, every coder forks it.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <i class="icon fas fa-bullseye fa-4x"></i><br />
+                <h4 class="font2">Elite Clientele</h4>
+                <p style="color: grey;">We have all the red coders and elite grandmasters.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <i class="icon fas fa-heart fa-4x"></i><br />
+                <h4 class="font2">Guaranteed to work.</h4>
+                <p style="color: grey;">Find your coding partner or your money back.</p>
+            </div>
+        </div>
+
+    </div>
+  </section>
+
+
+<!-- Testimonials -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <br /><br /><h3 align="center">Memories</h3> <br />
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{url_for('static', filename='img/designs/dps/dps_11.JPG')}}" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>.1..</h5>
+                        <p>..batch#11.</p>
+                      </div>  
+                </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{url_for('static', filename='img/designs/dps/dps_family.jpg')}}"alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>..2.</h5>
+                        <p>..hybrid@DPS.</p>
+                      </div> 
+                </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{url_for('static', filename='img/designs/dps/dps-j.jpg')}}" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>..3.</h5>
+                        <p>..DPS.</p>
+                      </div>   
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            
+            </div>
+            <br /><br />
+
+        </div>
+    </div>
+
+</div>
+<br /><br />
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6" style="background-color: rgb(255, 255, 255); border: 1px solid;">
+            <br/>
+            <div id="mynetwork"></div>
+            <br/>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6" style="background-color: rgb(252, 156, 156); border: 1px solid;">
+            <br/>
+            <b>S</b>K<sup>2</sup> <u>NO</u><strike>TICE</strike><span style="color:rgb(0, 0, 0); background-color: rgb(255, 222, 38)">BOARD</span>: AAAAAAbbbAAAA <span style="color:rgb(148, 148, 199); background-color: rebeccapurple">ssssss</span>
+            <br/>
+            <iframe style="border-radius: 10px;" id="video" width="320" height="180" src="//www.youtube.com/embed/4ZVq2Ev3rVU?rel=0" frameborder="0" allowfullscreen></iframe> 
+            <small>one of my fav ')</small><br />
+
+            <div class="card text-white bg-danger mb-3" style="max-width: 320px;">
+                <div class="card-header">Entry Restrictions:</div>
+                <div class="card-body">
+                  <h5 class="card-title">Dangerous card ahead <img src="{{url_for('static', filename='img/designs/danger.gif')}}" align="middle" height=50px/></h5>
+                  <p class="card-text">You need to be cooool.</p>
+                </div>
+              </div>
+
+            <br/>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6" style="background-color: rgb(255, 255, 255); border: 1px solid;">
+            <br/>
+                    <!-- Button -->
+                    <div>
+                        <input type="checkbox" class="checkbox" value="A" checked><label> G-A </label>
+                        <input type="checkbox" class="checkbox" value="B" checked><label> G-B </label>
+                        <input type="checkbox" class="checkbox" value="C" checked><label> G-C </label>
+                    </div>
+                    
+                    <!-- Create an element where the map will take place -->
+                    <svg id="my_dataviz" width="300" height="400"></svg>
+            <br/>
+        </div>
+    </div>
+</div>
+<br /><br />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 cardmedia" style="height: 650px; margin: 0; padding: 0; font-family: 'Space Mono', monospace; letter-spacing:1.6px;">
+            <br/>
+            <svg width="100%" height="100%">  
+                <defs>
+                  
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="65%">
+                    <stop offset="10%" stop-color="#004476" />
+                    <stop offset="90%" stop-color="#006fbe" />
+                  </linearGradient>
+                  <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="85%">
+                    <stop offset="0%" stop-color="#f5eacc" />
+                    <stop offset="80%" stop-color="#e0c677" />
+                    <stop offset="110%" stop-color="#ebd8a0" />      
+                  </linearGradient>
+                  <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="85%">
+                    <stop offset="0%" stop-color="#54e2fe" />
+                    <stop offset="80%" stop-color="#049afd" />
+                    <stop offset="110%" stop-color="#2aaffc" />      
+                  </linearGradient>
+                  <linearGradient id="grad4" x1="0%" y1="0%" x2="80%" y2="70%">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+                    <stop offset="90%" stop-color="rgba(255,255,255,0.3)" />
+                  </linearGradient>
+                  
+                  <pattern id="cardBg" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <image opacity="0.5" width="100" height="100" xlink:href="https://assets.codepen.io/721952/whiteNoise2.png" />
+                    <image class="fillLight" opacity="0.5" width="100" height="100" xlink:href="https://assets.codepen.io/721952/whiteNoise.png" />
+                  </pattern>
+                    
+                  <mask id="m">
+                    <rect class="card2" fill="#fff" width="340" height="540" rx="30" ry="30" />
+                  </mask>
+                  
+                </defs>
+                
+                <rect fill="url(#grad1)" width="100%" height="100%" />
+                
+                <g class="main">
+                  <circle class="ball bg" fill="url(#grad2)" cx="120" cy="130" r="130"/>
+                  <circle class="ball bg" fill="url(#grad3)" cx="550" cy="410" r="210"/>
+                  <g class="blur" mask="url(#m)">
+                    <image class="bg" x="33" y="7" width="700" height="600" xlink:href="https://assets.codepen.io/721952/bgBlur.jpg" />
+                  </g>
+                  <g class="card2">
+                    <rect fill="none" stroke="#ccc" opacity="0.75" stroke-width="3" width="341" height="541" rx="31" ry="31" opacity="0.8" />
+                    <rect fill="url(#cardBg)" width="340" height="540" rx="30" ry="30" opacity="0.8" />
+                    <text class="numTxt" fill="#f0f0f0" font-size="23">7856 2170 0225 9884</text>
+                    <text class="nameTxt" fill="#e4e4f4" font-size="15">DIGITAL PRODUCT SCHOOL</text>      
+                    <g class="chip">
+                      <rect fill="url(#grad2)" width="58" height="76.5" rx="9" ry="9" />
+                      <path fill="none" opacity="0.8" stroke="#c9b678" d="M58,54.05 M0,25.72c2.11,0.21,3.75,0.47,4.03,0.74c2.92,3.64,5.83,7.28,8.67,10.98c0.77,1,1.52,1.72,2.89,1.47c0.95-0.18,1.28,0.3,1.27,1.25c-0.04,4.03-0.01,8.03-0.02,12.07c8.44,0,16.73,0,25.08,0c0-8.43,0-25.32,0-25.32l-26.77,0c0,0-1.95,0-1.95-1.96c-0.4-1.85-0.4-14.9-0.34-24.95 M45.96,0c0,8.65,0.01,18.65-0.01,24.19c-0.01,2.9,0.27,2.55-2.38,2.84c0,3.91,0,7.82,0,12.17c4.69-3.07,7.28-8.53,11.07-12.63C55,26.06,56.3,25.72,58,25.5 M58,54.05c-0.55,0-0.89,0.01-0.89,0.01c-2.46,0.26-9.33-10.83-12.02-13.2c-0.41-0.36-1.57,0.2-1.57,0.2s-0.02,7.37-0.02,11.13c2.56,0.32,2.56,0.32,2.56,2.77c0,4.4,0,12.9,0,21.04 M13.1,76c0.01-8.57,0.04-17.77,0.07-22.53c-0.01-0.82,0.36-1.2,1.17-1.17c0.28,0.01,1.03-0.06,1.03-0.06l0.05-11.81c0,0-1.73,0.15-2.12,0.72c-0.39,0.57-6.16,7.63-9.18,11.5C3.9,52.85,2.19,53.11,0,53.35"/>
+                    </g>
+                    <path class="knot" opacity="0.82" fill="#eee" stroke="#eee" stroke-width="0.2" d="M57.29,25.64c0.22,3.8-1.46,7.05-2.79,10.39c0.22,6.27-2.65,12.28-7.79,15.91c-3.4,2.47-7.55,2.49-11.4,3.18c-4.9,3.24-11.44,3.87-16.76,1.25c-4.55-1.58-6.26-6.36-9.63-9.14c-4.95-2.36-7.89-7.5-8.72-12.77c-0.89-4.53,1.45-8.67,2.88-12.72C2.6,13.51,8.25,5.38,16.52,3.82c8.51-0.73,12.75-6.36,21.81-2.44c3.45,1.71,6.46,4.34,8.38,7.7C52.37,13.56,57.49,17.52,57.29,25.64z M10.66,40.61c-0.52,11.27,14.21,6.48,20.71,4.27c3.36-1.8,8.91-0.78,10.98-4.33c2.67-17.88,8.69-13.02-3.47-23.76c-0.89-0.91-1.69-1.92-2.65-2.76c-1.1-1.41,1.82-1.59,2.42-0.67c2.07,1.95,9.2,11.18,8.23,3.12c-1.46-13.3-22.26-1.65-30.14-0.84c-2.96,1.29-1.94,7.05-3.3,9.8c-1.15,5.17-4.42,8.14,1.03,11.95c0.88,1.24,9.41,7.1,6.03,7.74C17.85,45.86,10.2,32.65,10.66,40.61z M5.31,22.01c0.12,2.59,1.21,5.23,2.48,7.54c2.77,3.26,3.52-5.85,4.15-7.45c1.34-3.74,0.35-5.56-3.13-2.54c-3.69-0.81,2.33-4.29,3.8-4.75c1.92-1.05,2.18-3.61,3.4-5.31C22.23,1,3.36,9.19,5.31,22.01z M41.03,51.87c9.31-1.72,13.63-12.99,9.8-21.17c-0.93-3.34-3.13-4.76-3.83-0.36c-0.58,3.77-5.3,13.29,2.29,7.85c2.61,3.49-5.19,3.9-5.9,6.48c-0.69,1.5-1.26,3.13-2.29,4.44C40.25,49.87,39.05,51.76,41.03,51.87z M16.28,49.8c-4.06,0.84,3.39,4.83,4.79,5.32c1.61,0.7,10.41,1.61,9.27-1.45C20.53,47.6,26.36,50.17,16.28,49.8z M3.65,27.92c-2.58,1.17-1.11,7.02-0.69,9.38c0.99,1.58,3.19,7.3,5.45,5.38c0.46-1.18-0.51-2.41-0.19-3.66c-0.11-1.55,0.8-3.11,0.12-4.6c-1.05-1.81-2.66-3.26-3.31-5.3C4.77,28.36,4.27,27.92,3.65,27.92z M55.32,25.78c-0.18-2.59-0.65-5.49-2.15-7.78c-0.88-1.26-3.92-5.75-4.26-2.01c0.65,2.05,0.5,4.19,0.04,6.26c-0.03,1.93,1.99,3.11,2.62,4.85C53.69,32.33,55.05,30.04,55.32,25.78z M29.94,2.34c-7.72,0.84,1.81,4.22,3.78,5.86c1.45,0.64,3.12-0.08,4.64-0.17c1.26-0.41,2.77,0.64,3.81-0.33C41.66,3.44,33.77,1.68,29.94,2.34z M18.5,12.91c1.81-0.81,14.15-2.06,10.25-5.25c-2.13-0.65-4.59-2.36-6.81-1.65C20.69,7.03,15.07,12.18,18.5,12.91z M34.53,52.17c2.22-0.32,5.8-4.44,5.24-6.62c-0.97-1.12-6.7,1-8.21,1.52C23.58,48.62,30.53,51.77,34.53,52.17z"/>
+                    <path class="logo" fill="url(#grad4)" d="M100,31.88c0,0.02,0,0.04,0,0.05c-0.11-0.01-0.21-0.02-0.32-0.02c-2.3,0-4.6,0-6.9,0c-0.1,0-0.21-0.01-0.31-0.01c-0.34-1.59-0.66-3.15-0.99-4.72c-0.1,0-0.16-0.01-0.22-0.01c-3.29,0-6.58,0-9.88,0c-0.23,0-0.23,0-0.31,0.23c-0.49,1.43-0.99,2.86-1.48,4.29c-0.07,0.21-0.07,0.22-0.3,0.22c-2.69,0-5.38,0-8.07,0c-0.07,0-0.13-0.02-0.21-0.03c0.02-0.06,0.02-0.11,0.04-0.15c0.24-0.57,0.48-1.14,0.71-1.72c1.37-3.28,2.74-6.57,4.11-9.85c1.01-2.42,2.01-4.84,3.02-7.26c1.09-2.61,2.17-5.23,3.26-7.84c0.33-0.8,0.67-1.6,1.04-2.39c0.27-0.58,0.66-1.09,1.18-1.49c0.64-0.49,1.38-0.68,2.16-0.69c2.23-0.01,4.46,0,6.68,0c0.24,0,0.24,0,0.29,0.24c0.34,1.64,0.68,3.27,1.02,4.91c0.38,1.83,0.77,3.65,1.15,5.48c0.42,2.01,0.83,4.02,1.25,6.03c0.47,2.24,0.94,4.48,1.41,6.72c0.49,2.33,0.97,4.66,1.45,6.99C99.86,31.21,99.93,31.54,100,31.88z M87.75,9.17c-0.02,0-0.04-0.01-0.06-0.01c-1.38,3.85-2.77,7.71-4.16,11.58c2.25,0,4.46,0,6.69,0C89.39,16.88,88.57,13.03,87.75,9.17z M0,1.54c0.05,0.01,0.11,0.01,0.16,0.02c0.7,0.16,1.4,0.31,2.09,0.49c1.33,0.34,2.63,0.79,3.91,1.29c0.68,0.27,1.37,0.54,1.99,0.93C8.6,4.55,8.99,4.89,9.27,5.35c0.25,0.4,0.41,0.85,0.53,1.3c0.46,1.73,0.91,3.46,1.36,5.18c0.6,2.32,1.21,4.64,1.81,6.96c0.41,1.58,0.81,3.15,1.22,4.73c0.6,2.32,1.2,4.64,1.81,6.96c0.12,0.47,0.25,0.94,0.37,1.41c0.09,0.01,0.16,0.02,0.23,0.02c2.7,0,5.4,0,8.09,0c0.17,0,0.25-0.05,0.31-0.21c0.24-0.59,0.49-1.18,0.73-1.77c0.97-2.32,1.94-4.64,2.91-6.95c0.93-2.22,1.85-4.44,2.78-6.66c1.07-2.56,2.15-5.13,3.22-7.69c1.05-2.5,2.09-5,3.13-7.5c0.08-0.19,0.16-0.39,0.24-0.61c-2.86,0-5.68,0-8.52,0c-2.79,7.07-5.58,14.13-8.39,21.23c-0.03-0.1-0.06-0.16-0.07-0.21c-0.06-0.29-0.11-0.59-0.17-0.89c-0.26-1.35-0.51-2.71-0.77-4.06c-0.22-1.16-0.45-2.33-0.67-3.49c-0.28-1.46-0.55-2.92-0.83-4.38c-0.21-1.09-0.41-2.17-0.62-3.26c-0.14-0.72-0.26-1.44-0.43-2.16c-0.15-0.69-0.5-1.29-1.02-1.77c-0.76-0.7-1.67-1.02-2.69-1.02c-4.45-0.01-8.91,0-13.37,0c-0.09,0-0.17,0.01-0.26,0.02C0.2,0.67,0.18,0.79,0.15,0.91C0.11,1.11,0.05,1.3,0,1.49C0,1.51,0,1.53,0,1.54z M64.75,0c-0.08,0.01-0.15,0.03-0.23,0.04c-0.48,0.03-0.96,0.02-1.43,0.08c-1.43,0.15-2.83,0.45-4.18,0.95c-1.86,0.69-3.53,1.68-4.87,3.18c-1.79,2.02-2.52,4.39-2.29,7.06c0.14,1.65,0.88,3.02,2.01,4.2c0.61,0.63,1.29,1.16,2.01,1.65c1.1,0.74,2.28,1.36,3.45,1.99c0.83,0.45,1.68,0.89,2.41,1.5c0.32,0.26,0.63,0.55,0.88,0.88c0.52,0.69,0.58,1.45,0.19,2.22c-0.35,0.7-0.94,1.14-1.62,1.47c-0.96,0.46-1.99,0.63-3.04,0.65c-0.92,0.02-1.84-0.06-2.75-0.21c-1.81-0.3-3.54-0.86-5.18-1.71c-0.08-0.04-0.17-0.09-0.28-0.15c-0.49,2.31-0.98,4.59-1.47,6.89c0.36,0.13,0.7,0.27,1.05,0.39c1.2,0.41,2.43,0.72,3.68,0.94c1.28,0.23,2.57,0.37,3.88,0.4c0.06,0,0.12,0.03,0.17,0.04c0.28,0,0.57,0,0.85,0c0.05-0.01,0.1-0.03,0.15-0.04c0.57-0.04,1.15-0.07,1.72-0.12c1.81-0.17,3.56-0.59,5.23-1.33c1.51-0.67,2.85-1.57,3.95-2.81c1.05-1.17,1.75-2.52,2.12-4.05c0.21-0.89,0.28-1.8,0.27-2.71c-0.01-0.88-0.17-1.72-0.49-2.54c-0.5-1.3-1.34-2.34-2.38-3.24c-0.84-0.73-1.77-1.34-2.73-1.88c-1.07-0.6-2.15-1.17-3.22-1.76c-0.69-0.38-1.36-0.81-1.9-1.4c-0.7-0.77-0.79-1.66-0.13-2.5c0.34-0.44,0.79-0.73,1.29-0.96c0.92-0.42,1.9-0.55,2.9-0.56c0.62-0.01,1.24,0.03,1.85,0.11c1.53,0.19,3.01,0.58,4.42,1.2c0.14,0.06,0.29,0.12,0.45,0.18c0.48-2.23,0.96-4.43,1.43-6.64c-0.11-0.05-0.2-0.09-0.29-0.12c-0.76-0.28-1.55-0.51-2.34-0.69c-1.49-0.33-2.99-0.55-4.52-0.56c-0.08,0-0.15-0.03-0.23-0.04C65.28,0,65.02,0,64.75,0z M34.76,31.88c0.06,0.02,0.08,0.03,0.11,0.03c2.62,0,5.24,0,7.85,0c0.04,0,0.09-0.01,0.13-0.02c0.01,0,0.02-0.01,0.02-0.01c0.01-0.01,0.01-0.01,0.02-0.02c2.21-10.43,4.42-20.87,6.63-31.33c-2.71,0-5.39,0-8.11,0C39.2,10.98,36.98,21.43,34.76,31.88z"/>
+                  </g>
+                </g>
+              </svg>
+            <br/>
+        </div>
+    </div>
+</div>
+
+
+<!-- Custom JS here -->
+
+<script src='https://codepen.io/Tibixx/pen/BbBxRG.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.min.js'></script>
+<script src='https://codepen.io/Tibixx/pen/9dccfb07dada0ffd2345bce8bf3a5f5e.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js'></script>
+
+<!-- Graph Network -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+
+
+<!-- Load d3.js and the geo projection plugin -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<!-- partial card -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+
+
+
+
+<script type="text/javascript" src='{{ url_for('static', filename='js/2aesthetic.js') }}'></script> 
+{% endblock %}

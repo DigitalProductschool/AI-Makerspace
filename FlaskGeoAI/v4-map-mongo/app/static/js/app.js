@@ -1,0 +1,1 @@
+console.log("Hello from app.js! We are learning Rapid Prototyping 101 with skk");

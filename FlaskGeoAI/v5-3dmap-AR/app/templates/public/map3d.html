@@ -1,0 +1,91 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}3D Map{% endblock %}
+
+{% block main %}
+
+        <!-- Custom CSS here -->
+        <link rel='stylesheet' href='{{ url_for('static', filename='css/5map3dAR.css') }}'>
+
+        <section style="background-color: rgb(40, 40, 109); height: 60px;">
+            <p style="padding: 7px 30px; color: white;"> <a style="text-decoration: none; color: white;" href="/">3D Maps with CesiumJS</a> <strong>></strong> </p>
+            <span style="margin : 0px; overflow: hidden;">
+                <a-scene embedded arjs>
+                    <a-marker preset="hiro">
+                        <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+                        <a-entity
+                        position="0 -1 0"
+                        scale="0.05 0.05 0.05"
+                        gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+                        ></a-entity>
+                    </a-marker>
+                    <a-entity camera></a-entity>
+                    </a-scene>
+            </span>
+        </section>
+        <section style="background-color: rgb(235, 230, 229); height: 600px;">
+            <div id="cesiumContainer" style="width: 100%; height: 600px"></div>
+        </section>
+        <br /><br />
+
+
+        <section style="background-color: rgb(40, 40, 109); height: 60px;">
+            <p style="padding: 7px 30px; color: white;"> <a style="text-decoration: none; color: white;" href="/">Interactive BabylonJS Example</a> <strong>></strong> </p>
+        </section>
+            <div class="container-fluid" style="background-color: black; border-color: black; width: 100%; margin: 0px 0px;">
+                    <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <canvas style="border-color: black; padding: 0px; margin: 0px; width: 100%; height: 610px; overflow: hidden; z-index: 1;" id="renderCanvas"></canvas>
+                                    <button class="btn btn-md btn-danger" style="z-index: 2; background-color: red; position: absolute; top: 60px; right: 60px;"> Share your variant <i class="fas fa-share-alt"></i></button>
+                                    <div style="z-index: 2; position: absolute; top: 60px; left: 60px;">
+                                            <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                                                    <a href="#"><button type="button" class="btn btn-outline-light"><i class="fas fa-sitemap"></i></button></a>
+                                                    <button type="button" class="btn btn-outline-light"><i class="fas fa-biking"></i></button>
+                                                    <button type="button" class="btn btn-outline-light"><i class="fas fa-exclamation-circle"></i></button>
+                                            </div>
+                                    </div>
+                                    <div style="z-index: 2; position: absolute; top: 110px; right: 60px;">
+                                            <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                                                    <button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-plus"></i></button>
+                                                    <button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-minus"></i></button>
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+
+    <!-- Cesium.js -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.74/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.74/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src='{{ url_for('static', filename='js/5map3dar/cesium_everest.js') }}'></script>
+
+    <!-- Babylon.js -->
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://preview.babylonjs.com/ammo.js"></script>
+    <script src="https://preview.babylonjs.com/cannon.js"></script>
+    <script src="https://preview.babylonjs.com/Oimo.js"></script>
+    <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+    <!-- AR.js -->
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
+    <script src='{{ url_for('static', filename='js/5map3dar/babylon-varbuild.js') }}'></script> 
+    <script src='{{ url_for('static', filename='js/5map3dar/babylon.objFileLoader.js') }}'></script>  
+    <script src='{{ url_for('static', filename='js/5map3dar/babylon.objFileLoader.min.js') }}'></script>  
+
+{% endblock %}

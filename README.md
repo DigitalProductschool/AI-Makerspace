@@ -5,6 +5,6 @@ Advances in innovation of AI tools and technologies enable us to solve problems 
 
 AI Makerspace offers a platform to create an exposure gallery and provide templates to build AI use cases with advanced and fundamental technologies. Working closely with cross-functional innovation teams at [Digital Product School](https://digitalproductschool.io/), we guide the teams through AI Design Thinking, Lean AI Engineering, Explainable AI (XAI), Ethical AI, as well as User Experience (UX) of AI products. 
 
-:octocat: Each folder of our GitHub repository is self explanatory and offers templates for prototyping using the specified technology. 
+:octocat: Each folder of our GitHub repository is self explanatory and offers templates for prototyping for a selected technology and application. 
 
 Enjoy & Rock!

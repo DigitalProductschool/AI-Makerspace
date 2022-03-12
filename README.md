@@ -7,6 +7,6 @@ AI Makerspace offers a platform to create an exposure gallery and provide templa
 
 We support your entrepreneurship experience.
 
-:octocat: Each folder of our GitHub repository is self explanatory and offers templates for prototyping for a selected technology and application. 
+:octocat: Each folder of our GitHub repository is self explanatory and offers templates for prototyping with a selected technology and application. 
 
 Enjoy & Rock!

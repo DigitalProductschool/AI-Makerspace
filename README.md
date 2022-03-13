@@ -9,4 +9,6 @@ AI Makerspace offers a platform to create an exposure gallery and provide templa
 
 :octocat: Each folder of our GitHub repository is self explanatory and offers templates for prototyping with a selected technology and application. 
 
+📫 For any questions and if you are interested to collaborate, please contact asaei@unternehmertum.de.
+
 Enjoy & Rock!

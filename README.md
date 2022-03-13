@@ -1,5 +1,5 @@
 # [AI Makerspace](https://github.com/DigitalProductschool/AI-Makerspace) 
-## We support your entrepreneurship experience
+## We support your entrepreneurship experience 🚀
 
 Advances in innovation of AI tools and technologies enable us to solve problems faster, easier, and more effectively. As the technologies grow in complexity and diversity, we experience a growing need for guiding innovation teams through fast prototyping and user-centred development. 
 

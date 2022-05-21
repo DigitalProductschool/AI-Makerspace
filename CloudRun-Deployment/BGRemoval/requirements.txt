@@ -1,0 +1,15 @@
+click==8.0.4
+Flask==2.0.3
+Flask-Cors==3.0.10
+gunicorn==20.1.0
+itsdangerous==2.1.0
+Jinja2==3.0.3
+MarkupSafe==2.1.0
+numpy==1.22.2
+opencv-python==4.5.5.62
+Pillow==9.0.1
+six==1.16.0
+torch==1.10.2
+torchvision==0.11.3
+typing-extensions==4.1.1
+Werkzeug==2.0.3

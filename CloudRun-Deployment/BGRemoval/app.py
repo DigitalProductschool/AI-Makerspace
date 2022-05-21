@@ -30,7 +30,6 @@ def hello_background():
     # decode image
     img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
     model.load_image(img)
-    model.run_model()
     out = model.remove_background(red, green, blue, alpha)
     out_img = cv2.imencode(".png", out)[1].tobytes()
     return send_file(io.BytesIO(out_img), mimetype='image/png')

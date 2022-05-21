@@ -54,6 +54,8 @@ class BGRemoval:
 
         self.im = F.interpolate(self.im, size=(im_rh, im_rw), mode='area')
 
+        self.run_model()
+
     def run_model(self):
         # inference
         _, _, self.mask = self.model(self.im, True)

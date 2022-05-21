@@ -4,8 +4,8 @@ from statsmodels.tsa.statespace.sarimax import SARIMAXResults
 
 class DPSModel():
     def __init__(self):
-        self.Alkohol_model = SARIMAXResults.load('./models/Alkoholunfälle_model.pkl')
-        self.Verkehrs_model = SARIMAXResults.load('./models/Verkehrsunfälle_model.pkl')
+        self.Alkohol_model = SARIMAXResults.load('./models/Alkoholunfaelle_model.pkl')
+        self.Verkehrs_model = SARIMAXResults.load('./models/Verkehrsunfaelle_model.pkl')
 
     def run(self, n_steps):
         models = [self.Alkohol_model, self.Verkehrs_model]

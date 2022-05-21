@@ -1,9 +1,11 @@
 from flask import Flask
 from flask import request
+from flask_cors import CORS
 
 from inference import DPSModel
 
 app = Flask(__name__)
+CORS(app)
 
 model = None
 

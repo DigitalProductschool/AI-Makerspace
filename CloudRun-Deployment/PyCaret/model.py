@@ -13,8 +13,7 @@ class LoanClassification:
 
     def __init__(self):
         self.model = load_model('RF_Model_V1')
-        self.predictions_data = None
 
     def predict_rating(self, df):
-        self.predictions_data = predict_model(estimator=self.model, data=df)
-        return self.predictions_data['Label'][0]
+        predictions_data = predict_model(estimator=self.model, data=df)
+        return predictions_data['Label'][0]

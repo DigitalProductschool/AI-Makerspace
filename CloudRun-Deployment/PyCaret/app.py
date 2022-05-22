@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask import request
 from flask_cors import CORS
@@ -6,6 +7,7 @@ import pandas as pd
 from model import LoanClassification
 
 app = Flask(__name__)
+CORS(app)
 
 model = None
 
@@ -21,17 +23,17 @@ def get_predictions():
     global model
     data_dict = request.json
     features = {
-        'Age': int(data_dict.get('Age', 0)),
-        'Experience': int(data_dict.get('Experience', 0)),
-        'Income': int(data_dict.get('Income', 0)),
-        'Family': int(data_dict.get('Family', 0)),
-        'CCAvg': int(data_dict.get('CCAvg', 0)),
-        'Education': int(data_dict.get('Education', 0)),
-        'Mortgage': int(data_dict.get('Mortgage', 0)),
-        'SecuritiesAccount': int(data_dict.get('SecuritiesAccount', 0)),
-        'CDAccount': int(data_dict.get('CDAccount', 0)),
-        'Online': int(data_dict.get('Online', 0)),
-        'CreditCard': int(data_dict.get('CreditCard', 0))}
+        "Age": int(data_dict.get("Age", 0)),
+        "Experience": int(data_dict.get("Experience", 0)),
+        "Income": int(data_dict.get("Income", 0)),
+        "Family": int(data_dict.get("Family", 0)),
+        "CCAvg": float(data_dict.get("CCAvg", 0)),
+        "Education": int(data_dict.get("Education", 0)),
+        "Mortgage": int(data_dict.get("Mortgage", 0)),
+        "SecuritiesAccount": int(data_dict.get("SecuritiesAccount", 0)),
+        "CDAccount": int(data_dict.get("CDAccount", 0)),
+        "Online": int(data_dict.get("Online", 0)),
+        "CreditCard": int(data_dict.get("CreditCard", 0))}
 
     features_df = pd.DataFrame([features])
 
@@ -46,4 +48,4 @@ def get_predictions():
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", 5000)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

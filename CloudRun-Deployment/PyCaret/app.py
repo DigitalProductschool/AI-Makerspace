@@ -18,7 +18,7 @@ def load_model():
     model = LoanClassification()
 
 
-@app.route('/predictions', methods=['POST'])
+@app.route('/', methods=['POST'])
 def get_predictions():
     global model
     data_dict = request.json

@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="362605bd-3951-4f8e-85db-c5095c15a2fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/AI-Makerspace.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BGRemoval/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BGRemoval/.idea/BGRemoval.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BGRemoval/.idea/BGRemoval.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BGRemoval/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BGRemoval/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BGRemoval/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BGRemoval/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Forecasting/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Forecasting/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="362605bd-3951-4f8e-85db-c5095c15a2fb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/abouslima/Documents/GitHub/AI-Makerspace/CloudRun-Deployment/Forecasting",
+    "last_opened_file_path": "/home/abouslima/Documents/GitHub/AI-Makerspace/CloudRun-Deployment/PyCaret",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,6 +49,11 @@
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="PyCaret" type="PythonConfigurationType" factoryName="Python">
       <module name="PyCaret" />
@@ -99,6 +89,7 @@
       <workItem from="1653168099066" duration="824000" />
       <workItem from="1653168934377" duration="69000" />
       <workItem from="1653169017961" duration="732000" />
+      <workItem from="1653252430627" duration="770000" />
     </task>
     <servers />
   </component>

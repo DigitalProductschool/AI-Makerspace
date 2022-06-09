@@ -20,7 +20,9 @@ This directory holds the files for the Photo2Cartoon Streamlit App based on Phot
 |- images - hosting test img
    - photo_test.jpg
 
-|- environment.yml - listing conda based packages
+|- Dockerfile - for deploying docker container
+
+|- environment.bak.yml - listing conda based packages
 
 |- packages.txt - listing apt-get packages
 

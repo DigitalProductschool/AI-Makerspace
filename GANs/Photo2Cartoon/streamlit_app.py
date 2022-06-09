@@ -32,6 +32,7 @@ img_file_buffer = st.file_uploader("Upload Your Image to Cartoonify...")
 if img_file_buffer is not None:
     image = img_file_buffer
     image_out = Image.open(img_file_buffer)
+    image_out = image_out.convert('RGB')
     st.image(image_out, caption='Your Image', use_column_width=False, width=400)
     im1 = image_out.save("input.jpg")
     image_input = cv2.imread("input.jpg")

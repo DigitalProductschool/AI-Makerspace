@@ -1,7 +1,8 @@
-import cv2
 import math
-import numpy as np
+
+import cv2
 import face_alignment
+import numpy as np
 
 
 class FaceDetect:

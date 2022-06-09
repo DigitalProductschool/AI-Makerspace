@@ -1,0 +1,3 @@
+# Never modify line endings of our bash scripts and txt files
+*.sh -crlf
+*.txt -crlf

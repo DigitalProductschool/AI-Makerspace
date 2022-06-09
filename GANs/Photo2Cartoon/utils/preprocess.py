@@ -1,6 +1,7 @@
+import numpy as np
+
 from .face_detect import FaceDetect
 from .face_seg import FaceSeg
-import numpy as np
 
 
 class Preprocess:

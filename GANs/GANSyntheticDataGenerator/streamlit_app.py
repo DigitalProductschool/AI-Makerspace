@@ -46,7 +46,7 @@ if st.button('Generate'):
   if dataframe is None:
     st.error("Please Upload Your CSV")
   else:
-    with st.spinner('Abra ka dabra...'):
+    with st.spinner('Happy Crazy Coder...'):
     # mymodel = create_model()
 
     # mymodel.save("{}.pkl".format(model_name))

@@ -2,6 +2,9 @@
 
 This directory holds the files for the Photo2Cartoon Streamlit App based on Photo2Cartoon GAN project. 
 
+<h3>Deployed App</h3>
+<a href='https://share.streamlit.io/alihussainia/cartoongenerator/main'>Cartoon Image Generator</a>   
+   
 <h3>Model:</h3>
 
 <a href='https://github.com/minivision-ai/photo2cartoon'>Photo2Cartoon</a> by minivision-ai.

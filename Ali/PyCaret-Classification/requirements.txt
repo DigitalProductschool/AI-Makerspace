@@ -1,8 +1,0 @@
-pycaret
-streamlit
-fastapi
-uvicorn
-m2cgen
-evidently
-explainerdashboard
-fairlearn

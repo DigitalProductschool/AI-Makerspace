@@ -1,0 +1,58 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %}ML API{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br /><br />
+        <center><br />
+        <h4>with Google VM | Docker & App Engine </h4>  
+        |  <br />
+        |  <br />
+        |  <br />
+        |  <br />
+        |  <br />
+        |  <br />
+        |  <br />
+        /\ <br />
+        <a href="/googlevm" target="_blank" rel="noopener noreferrer">/googlevm</a> | <a href="/googleapp" target="_blank" rel="noopener noreferrer">/googleapp</a>
+        <br /><br />
+        ?lat=53.536094&lon=10.029404&zip=20539<br />
+    </center>
+
+        <pre>
+            <code>
+                <small>
+                    import requests
+                    import certifi
+                    client = pymongo.MongoClient(uri, tlsCAFile=certifi.where())
+
+                    str1 = "http://127.0.0.1:5000/googlevm?lat="
+                    api_url = str1+str(lat)+"&lon="+str(lon)+"&zip="+str(zip)
+                    data = requests.get(api_url).json()
+                    final_index = dict(data)['final_index']
+                    loc_class = dict(data)['loc_class']
+                    
+                    collection2.insert_many(myList)
+                    collection2.insert_one(record)
+                    
+                    $ sudo ufw enable
+                    $ sudo ufw allow
+                    $ sudo ufw disable
+                    $ sudo ufw status
+                    $ ssh vmname@ip
+                    $ scp -r flaskfolder/* vmname@ip:~/
+                    $ nohup python3 app.py &
+                </small>
+            </code>
+        </pre>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

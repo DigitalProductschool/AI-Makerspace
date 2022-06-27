@@ -1,0 +1,19 @@
+body {
+    background-color: #f1f1f1;
+}
+
+p.ex1 {
+    border: 1px solid red;
+}
+
+.imghead {
+    width: 750px;
+    height: auto;
+}
+
+@media (max-width: 450px) {
+    .imghead {
+        width: 100%;
+        height: auto;
+    }
+  }

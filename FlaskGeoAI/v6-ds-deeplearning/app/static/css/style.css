@@ -1,0 +1,48 @@
+body {
+    background-color: #f1f1f1;
+}
+
+p.ex1 {
+    border: 1px solid red;
+}
+
+.imghead {
+    width: 750px;
+    height: auto;
+}
+
+@media (max-width: 450px) {
+    .imghead {
+        width: 100%;
+        height: auto;
+    }
+  }
+
+.p1 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2.p1 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media (max-width: 700px) {
+    .p1 {
+        font-size: 12px;
+    }
+    .resp {
+        height:90px;
+    }
+}
+
+
+#map2 { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    z-index: -100; 
+}

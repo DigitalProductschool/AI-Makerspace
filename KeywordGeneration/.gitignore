@@ -1,0 +1,7 @@
+.git
+.ipynb_checkpoints
+.deta
+.vscode
+myenv
+__pycache__
+

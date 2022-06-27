@@ -1,0 +1,58 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% import 'macros/input_macros.html' as im %}
+
+{% block title %} DS|DL {% endblock %}
+
+{% block main %}
+
+<link rel="stylesheet" href={{url_for('static' , filename = 'css/6dsdl/normalize.css')}}>
+<link rel="stylesheet" href={{url_for('static' , filename = 'css/6dsdl/grid.css')}}>
+<link rel='stylesheet' href={{url_for('static' , filename = 'css/6dsdl/styleSucc.css')}}>
+<link rel='stylesheet' href={{url_for('static' , filename = 'css/6dl.css')}}>
+
+
+<div class = "second-main" style = "height: 100% , width : 100%;">
+    <br />
+    <div class = "header">
+        <row style = "width: 100% ; display: flex; justify-content: center;">
+            <h3 class="header-text">Uploaded Image</h3>
+        </row>
+        <row style = "width: 100% ; display: flex; justify-content: center;">
+            <img class = "result-img" src={{url_for('static', filename = 'images/'+ img)}}>
+        </row>
+    </div>
+
+    <div class = "info">
+    
+        <row style = "width: 100% ; display: flex; justify-content: center;">
+            <h3 class = "header-text">Model Prediction</h3>
+        </row>
+        <center>
+        <row style = "width: 100%; display: flex; justify-content: center; background-color: black; max-width: 1200px;">
+            <table class="table-bordered text-light table-custom">
+                <tr>
+                    <th>Rank</th>
+                    <th>Class</th>
+                    <th>Probability</th>
+                </tr>
+                <tr>
+                    <td>1st</td>
+                    <td>{{ predictions.class1 }}</td>
+                    <td>{{ predictions.prob1 }} %</td>
+                  </tr>
+                  <tr>
+                    <td>2nd</td>
+                    <td>{{ predictions.class2 }}</td>                                                         
+                    <td>{{ predictions.prob2 }} %</td>                                                      
+                </tr>                                                                                                               
+                <tr>
+                    <td>3rd</td>
+                    <td>{{ predictions.class3 }}</td>
+                    <td>{{ predictions.prob3 }} %</td>
+                  </tr>
+            </table>
+        </row></center>
+    </div>
+</div>
+{% endblock %}

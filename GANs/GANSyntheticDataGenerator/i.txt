@@ -1,0 +1,5 @@
+sdv
+streamlit
+pillow
+requests
+npm:localtunnel

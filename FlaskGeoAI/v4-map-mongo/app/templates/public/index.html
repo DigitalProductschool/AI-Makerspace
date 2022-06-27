@@ -1,0 +1,26 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% block title %}
+Welcome to DPS
+{% endblock %}
+
+{% block main %}
+<div class='container'>
+    <div class="row"> 
+        <div class="col">
+            <center>
+            <br /><br />
+            <h2>Welcome to AI Maker Space</h2>
+            <br /><br />
+            <img src="{{url_for('static', filename='img/mario.gif')}}" align="middle" height=250px/>
+            <br /><br />
+            <h6>Digital Product School</h6>
+            <br />
+            </center>
+            <p class="ex1" align="justify" style="padding: 15px 15px 15px 15px">            
+                Please put a nice paragraph here. We are learning Rapid Prototyping 101.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

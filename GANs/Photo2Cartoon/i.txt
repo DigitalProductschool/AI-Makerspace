@@ -1,0 +1,16 @@
+tensorflow
+streamlit
+pillow
+numpy
+requests
+cmake==3.21.1
+torch==1.8.0
+torchvision==0.9.0
+numpy==1.19.2
+ipython==7.21.0
+opencv-python==4.3.0.38
+face-alignment==1.3.4
+onnxruntime
+npm:localtunnel
+
+# BEWARE: ONLY FOR COLAB - Don't run it elsewhere!

@@ -8,13 +8,13 @@ from tensorflow.keras.applications.inception_v3 import preprocess_input
 
 @st.cache(allow_output_mutation=True)
 def downloading_model():
-  call('gdown --id 1FgnD8ixlLscDvFCHuq99TDYpMV66I-Mb',shell=True)
+  call('gdown --id 1FgnD8ixlLscDvFCHuq99TDYpMV66I-Mb -O models/',shell=True)
 
 downloading_model()
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model = tf.keras.models.load_model('bestmodel_3class.hdf5', compile = False)
+    model = tf.keras.models.load_model('models/bestmodel_3class.hdf5', compile = False)
     return model
 
 with st.spinner('Loading Model Into Memory....'):

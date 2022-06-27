@@ -1,12 +1,11 @@
-# Loan Classification App on GKE-Autopilot
-This directory contains all the files for the `loan Classification` application deployed on `Google Kubernetes Engine (GKE) Autopilot`. 
+# Food Classification App on GKE-Autopilot
+This directory contains all the files for the `Food Classification` application deployed on `Google Kubernetes Engine (GKE) Autopilot`. 
 
 ## Tools:
 Following tools are used in this project:
 
-- PyCaret.
+- Tensorflow
 - Streamlit.
-- FastAPI.
 - Google Cloud Storage.
 - Docker.
 - Kubectl.

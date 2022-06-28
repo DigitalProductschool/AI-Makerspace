@@ -12,7 +12,7 @@ cd task-2-testing-app-locally/
 ```
 2. Move Dockerfile from `creating-docker-image` to `testing-app-locally` directory, using:
 ```bash
-mv ../task-3-docker-image/Dockerfile .
+mv ../task-3-creating-docker-image/Dockerfile .
 ```
 3. Build the project's docker image using:
 ```bash

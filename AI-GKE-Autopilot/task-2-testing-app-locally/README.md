@@ -27,3 +27,6 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Samosachutney.jpg/280p
 ```url
 https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/220px-Eq_it-na_pizza-margherita_sep2005_sml.jpg
 ```
+<hr></hr>
+<h3>Gratitude Note:</h3>
+Thank you <a href="https://github.com/abouslima">Ahmed</a> for your kind-hearted support and impressive cv2 contribution in streamlit app logic. :raised_hands:

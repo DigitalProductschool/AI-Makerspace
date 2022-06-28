@@ -2,7 +2,11 @@
 
 In this task, we are going to follow these steps:
 
-1. Change directory to `testing-app-locally` directory, using:
+1. Set the `PROJECT_ID` environment variable using:
+```bash
+export PROJECT_ID=<enter-your-project-id>
+```
+2. Change directory to `testing-app-locally` directory, using:
 ```bash
 cd task-2-testing-app-locally/
 ```

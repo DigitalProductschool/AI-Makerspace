@@ -23,7 +23,7 @@ The directory contains sub-directories for the following tasks:
 8. Testing the Web Application.
 
 ## Dataset: 
-The project uses [Universal bank dataset](https://www.kaggle.com/sriharipramod/bank-loan-classification) from Kaggle.
+<a href="https://www.tensorflow.org/datasets/catalog/food101">[Food101 Dataset]</a> from Tensorflow Datasets has been used for this project.
 
 ## Author:
 Project developed with ❤️ by [@alihussainia](https://www.github.com/alihussainia).

@@ -1,0 +1,9 @@
+numpy
+streamlit
+tensorflow-cpu
+gdown
+pillow
+requests
+opencv-python-headless==4.5.4.60
+opencv-contrib-python-headless==4.5.4.60
+dlib-binary

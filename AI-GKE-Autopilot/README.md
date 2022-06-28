@@ -7,7 +7,7 @@ Following tools are used in this project:
 - Tensorflow
 - Streamlit.
 - Google Cloud Storage.
-- Docker.
+- Docker/GCR.
 - Kubectl.
 - GKE-Autopilot Cluster.
 

@@ -1,6 +1,6 @@
 numpy
 streamlit
-tensorflow
+tensorflow-cpu
 gdown
 pillow
 requests

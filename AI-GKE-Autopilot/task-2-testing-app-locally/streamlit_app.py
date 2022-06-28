@@ -1,16 +1,24 @@
-from subprocess import call
 import streamlit as st
 import tensorflow as tf
 import numpy as np
 import requests
 import cv2
+import gdown
 from tensorflow.keras.applications.inception_v3 import preprocess_input
+from subprocess import call
+from glob import glob
 
 @st.cache(allow_output_mutation=True)
 def downloading_model():
-  call('gdown --id 1FgnD8ixlLscDvFCHuq99TDYpMV66I-Mb -O models/',shell=True)
+  id = "1FgnD8ixlLscDvFCHuq99TDYpMV66I-Mb"
+  output = "bestmodel_3class.hdf5"
+  gdown.download(id=id, output=output, quiet=False)
 
 downloading_model()
+
+files = glob('*bestmodel_3class.hdf5*')
+call(f'mv {files} bestmodel_3class.hdf5', shell=True)
+call(f'mv bestmodel_3class.hdf5 models/', shell=True)
 
 @st.cache(allow_output_mutation=True)
 def load_model():
@@ -36,7 +44,7 @@ else:
     if path:
         test_image = path
     else:
-        test_image = r'https://github.com/alihussainia/AI-Makerspace/raw/master/AI-GKE-Autopilot/images/pizza.jpg'
+        test_image = r'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Samosachutney.jpg/280px-Samosachutney.jpg'
     image_input = requests.get(test_image, stream=True).raw
     image_input = np.asarray(bytearray(image_input.read()), dtype="uint8")
     image_input = cv2.imdecode(image_input, cv2.IMREAD_COLOR)

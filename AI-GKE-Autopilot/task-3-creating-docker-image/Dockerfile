@@ -11,6 +11,10 @@ COPY . ./
 
 RUN ls -la $APP_HOME/
 
+# if we have a packages.txt, install it
+COPY packages.txt packages.txt
+RUN xargs -a packages.txt apt-get install --yes
+
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 

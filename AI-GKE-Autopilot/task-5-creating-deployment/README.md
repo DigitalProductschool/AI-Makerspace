@@ -8,7 +8,7 @@ alias k=kubectl
 ```
 2. Deploy the `deployment.yaml` manifest file, using:
 ```bash
-k create -f $WORKING_DIR/task-5-creating-deployment/deploy.yaml
+k create -f $WORKING_DIR/task-5-creating-deployment/deployment.yaml
 ```
 2. Watch the deployment status, using:
 ```bash

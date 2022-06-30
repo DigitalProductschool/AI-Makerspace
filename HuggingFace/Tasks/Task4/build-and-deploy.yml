@@ -1,0 +1,103 @@
+name: Build and Deploy
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+      context:
+        required: true
+        type: string
+      deployment-name:
+        required: true
+        type: string
+      image-name:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+      cluster-name:
+        required: true
+        type: string
+      zone:
+        required: true
+        type: string
+      project:
+        required: true
+        type: string
+      dockerfile:
+        required: true
+        type: string
+      repository:
+        required: true
+        type: string
+    secrets:
+      GHCR_PAT:
+        required: true
+      REACT_SPRING_TEMPLATE_SA:
+        required: true
+
+jobs:
+  # define job to build and publish docker image
+  build-and-deploy:
+    name: Build Docker image and push to repositories
+    # run only when code is compiling and tests are passing
+    runs-on: ubuntu-latest
+
+    # steps to perform in job
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Declare image-tag var
+        id: image-tag
+        shell: bash
+        run: |
+          echo "::set-output name=value::ghcr.io/digitalproductschool/${{ inputs.repository }}/${{ inputs.image-name }}:$(git rev-parse --short HEAD)"
+      # setup Docker buld action
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to Github Packages
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ inputs.username }}
+          password: ${{ secrets.GHCR_PAT }}
+
+      - name: Build image and push to GitHub Container Registry
+        uses: docker/build-push-action@v2
+        with:
+          # relative path to the place where source code with Dockerfile is located
+          context: ${{ inputs.context }}
+          file: ${{inputs.context}}/${{ inputs.dockerfile }}
+          # Note: tags has to be all lower-case
+          tags: ${{ steps.image-tag.outputs.value }}
+
+          # build on feature branches, push only on main branch
+          push: true
+
+      - name: Update deployment file
+        run: sed -i 's|<IMAGE>|${{ steps.image-tag.outputs.value }}|' $GITHUB_WORKSPACE/${{ inputs.context }}/deployment.yaml
+
+      - uses: "google-github-actions/setup-gcloud@v0" # Setup gcloud
+        with:
+          service_account_key: ${{ secrets.REACT_SPRING_TEMPLATE_SA }} # ServiceAccount key with necessary rights added as a secret on Github.
+
+      # Generate kubeconfig entry
+      - run: gcloud container clusters get-credentials ${{ inputs.cluster-name }} --zone ${{ inputs.zone }} --project ${{ inputs.project }}
+
+      - name: Kubectl apply
+        run: kubectl apply -n ${{ inputs.environment }} -f ${{ inputs.context }}/deployment.yaml
+
+      - name: Kubectl rollout
+        run: kubectl rollout status -n ${{ inputs.environment }} deployment/${{ inputs.deployment-name }}
+
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
+
+      - name: get IP address of deployment
+        run: kubectl get services --namespace development ${{ inputs.image-name }} --output jsonpath='{.status.loadBalancer.ingress[0].ip}'

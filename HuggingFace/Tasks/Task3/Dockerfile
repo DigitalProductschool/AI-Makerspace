@@ -10,7 +10,7 @@ ENV PYTHONUNBUFFERED=1
 # Define the working directory
 WORKDIR /app
 
-# Install pip requirements
+# Copy requirements.txt to the Docker container
 COPY requirements.txt .
 
 # Install the dependencies

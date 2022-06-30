@@ -1,4 +1,4 @@
-- Go to the [huggingface.co/models]([https://huggingface.co/models?sort=downloads])
+- Go to the [huggingface.co/models](https://huggingface.co/models?sort=downloads)
 
 - Filter and choose model for your use case
 

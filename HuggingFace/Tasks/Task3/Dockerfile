@@ -7,14 +7,20 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
+# Define the working directory
+WORKDIR /app
+
 # Install pip requirements
 COPY requirements.txt .
 
+# Install the dependencies
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
-WORKDIR /app
+# Copy all the files to the container
 COPY . /app
 
+# Download and save the model inside the container
 RUN python save-t5.py
 
+# Run the application server
 CMD gunicorn inference:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:80 --timeout 120

@@ -1,4 +1,4 @@
-- Have Python installed on your machine
+- Have Python installed on your machine. I am using python 3.9
 
 - Install all the dependencies
 
@@ -6,7 +6,7 @@
 pip install -r requirements.txt
 ```
 
-- Download and save the huggingface model
+- Download and save the huggingface model by running the below code
 
 ```bash
 python save-t5.py

@@ -22,10 +22,9 @@ summarization = pipeline(
     "summarization", 
     model=model, 
     tokenizer=tokenizer,
-    min_length=15,
+    min_length=10,
     max_length=50,
-    num_beams=2,
-    framework="tf")
+    num_beams=2)
 
     
 @app.get('/')

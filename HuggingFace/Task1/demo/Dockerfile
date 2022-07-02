@@ -17,7 +17,7 @@ COPY requirements.txt .
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
 # Copy all the files to the container
-COPY . /app
+COPY . .
 
 # Download and save the model inside the container
 RUN python save-t5.py

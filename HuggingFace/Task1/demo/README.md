@@ -1,4 +1,4 @@
-- Have Python installed on your machine. I am using python 3.9
+- Have Python installed on your machine
 
 - Install all the dependencies
 
@@ -6,7 +6,7 @@
 pip install -r requirements.txt
 ```
 
-- Download and save the huggingface model by running the below code
+- Download and save the huggingface model
 
 ```bash
 python save-t5.py
@@ -15,7 +15,7 @@ python save-t5.py
 - Start the server(running a single process.)
 
 ```bash
-uvicorn inference:app --host 0.0.0.0 --port 80
+uvicorn inference:app --host 0.0.0.0 --port 80 --reload
 ```
 
 - When deploying application you will probably want to have some replication of processes to take advantage of multiple cores and to be able to handle more requests.

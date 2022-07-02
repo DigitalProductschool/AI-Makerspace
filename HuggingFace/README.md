@@ -3,7 +3,7 @@
 Abstractive summarizers are so-called because they do not select sentences from the originally given text passage to create the summary. Instead, they produce a paraphrasing of the main contents of the given text, using a vocabulary set different from the original document. 
 #
 
-After completing all the tasks your deployed text summarizing application will look like this: [Click here for live demo](http://35.242.170.185/docs)
+After completing all the tasks your deployed text summarizing **API** will look like this: [Click here for live demo](http://35.242.170.185/docs)
 
 
 #

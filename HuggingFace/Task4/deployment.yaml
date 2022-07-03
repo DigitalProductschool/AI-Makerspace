@@ -23,10 +23,10 @@ spec:
           imagePullPolicy: Always
           resources:
             requests:
-              memory: "64M"
+              memory: "2Gi"
               cpu: "125m"
             limits:
-              memory: "128M"
+              memory: "2Gi"
               cpu: "250m"
       imagePullSecrets:
         - name: ghcr-credentials

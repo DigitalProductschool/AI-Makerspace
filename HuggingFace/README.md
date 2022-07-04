@@ -29,7 +29,7 @@ After completing all the tasks your deployed text summarizing **API** will look 
 
 - `Step 1`: Installing gdown
 
-``bash
+```bash
 pip3 install gdown
 ```
 

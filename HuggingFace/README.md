@@ -62,6 +62,9 @@ python3 save-t5.py
 ```bash
 python3 -m uvicorn inference:app --host 0.0.0.0 --port 80 --reload
 ```
+
+Go to "/docs" route to test the api. 
+ 
  
  - `Step 7`(Optional): Running the server with multiple worker processess.
 

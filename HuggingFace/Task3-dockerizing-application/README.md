@@ -1,3 +1,5 @@
+# Dockerizing the application
+
 - Make sure you have **Docker Desktop** installed and running.
 
 - Build the Docker image

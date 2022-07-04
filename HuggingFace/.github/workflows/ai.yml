@@ -6,22 +6,22 @@ on:
     branches:
       - master
     paths:
-      - "ai-fastapi-server/**"
+      - "<path-to-workdir>/**"
 
 jobs:
   build-frontend:
     uses: ./.github/workflows/build-and-deploy.yml
     with:
-      context: ./ai-fastapi-server
+      context: ./<path-to-workdir>
       image-name: ai
       deployment-name: ai-deployment
       username: ${{ github.actor }}
       environment: development
-      cluster-name: farmpedia
+      cluster-name: <your-cluster-name>
       zone: europe-west2
       project: batch16-projects
       dockerfile: Dockerfile
-      repository: batch16--farmpedia
+      repository: <your-git-repo>
     secrets:
       GHCR_PAT: ${{ secrets.GHCR_PAT }}
       REACT_SPRING_TEMPLATE_SA: ${{ secrets.REACT_SPRING_TEMPLATE_SA }}

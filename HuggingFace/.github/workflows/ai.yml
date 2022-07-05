@@ -1,0 +1,27 @@
+name: ai Build
+
+on:
+  # run it on push to the staging repository branch
+  push:
+    branches:
+      - master
+    paths:
+      - "<path-to-workdir>/**"
+
+jobs:
+  build-frontend:
+    uses: ./.github/workflows/build-and-deploy.yml
+    with:
+      context: ./<path-to-workdir>
+      image-name: ai
+      deployment-name: ai-deployment
+      username: ${{ github.actor }}
+      environment: development
+      cluster-name: <your-cluster-name>
+      zone: europe-west2
+      project: batch16-projects
+      dockerfile: Dockerfile
+      repository: <your-git-repo>
+    secrets:
+      GHCR_PAT: ${{ secrets.GHCR_PAT }}
+      REACT_SPRING_TEMPLATE_SA: ${{ secrets.REACT_SPRING_TEMPLATE_SA }}

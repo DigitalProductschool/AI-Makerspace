@@ -27,37 +27,32 @@ After completing all the tasks your deployed text summarizing **API** will look 
 
 ### Project Steps
 
-- `Step 1`: Installing gdown
+- `Step 1`: Cloning the repo
 
 ```bash
-pip3 install gdown
+git clone https://github.com/DigitalProductschool/AI-Makerspace.git
 ```
 
-- `Step 2`: Downloading the files
+ 
+- `Step 2`: Changing working directory to HuggingFace
 
 ```bash
-gdown --folder "https://drive.google.com/drive/folders/1Wwow25Knz54njPwPz6dwhrJtUhBbJjoH?usp=sharing"
+cd AI-Makerspace/HuggingFace/
 ```
  
-- `Step 3`: Changing working directory to HuggingFace
-
-```bash
-cd HuggingFace
-```
- 
-- `Step 4`: Installing dependencies using pip3
+- `Step 3`: Installing dependencies using pip3
  
 ```bash
 pip3 install -r requirements.txt
 ```
  
-- `Step 5`: Downloading the HuggingFace model
+- `Step 4`: Downloading the HuggingFace model
  
 ```bash
 python3 save-t5.py
 ```
  
-- `Step 6`: Running uvicorn server
+- `Step 5`: Running uvicorn server
 
 ```bash
 python3 -m uvicorn inference:app --host 0.0.0.0 --port 80 --reload
@@ -66,25 +61,25 @@ python3 -m uvicorn inference:app --host 0.0.0.0 --port 80 --reload
 Go to "/docs" route to test the api. 
  
  
- - `Step 7`(Optional): Running the server with multiple worker processess.
+ - `Step 6`(Optional): Running the server with multiple worker processess.
 
 ```bash
 python3 -m gunicorn inference:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:80
 ```
 
-- `Step 8`: Building the Docker image
+- `Step 7`: Building the Docker image
 
 ```bash
 docker build -t inference .
 ```
 
-- `Step 9`: Running the Docker container
+- `Step 8`: Running the Docker container
 
 ```bash
 docker run -d -p 80:80 inference
 ```
 
-- `Step 10`: Update YAML manifests according to your project
+- `Step 9`: Update YAML manifests according to your project
 
 ### Sample I/O 
 - Test input:

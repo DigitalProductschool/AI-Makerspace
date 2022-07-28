@@ -7,6 +7,6 @@ AI Makerspace is a hub of user-centered AI applications. We provide blueprints t
 
 :octocat: Each folder of our GitHub repository is self explanatory and offers templates for prototyping with a selected technology and application. 
 
-📫 For any questions and if you are interested to collaborate, please contact asaei@unternehmertum.de.
+📫 For any questions and if you are interested to collaborate, fill out this [application form](https://forms.gle/2Yh1DNZyR97f5w4q6).
 
 Enjoy & Rock!

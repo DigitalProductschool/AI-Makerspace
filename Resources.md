@@ -1,9 +1,13 @@
-PUBLIC datasets: 
-- google dataset search
-- kaggle dataset
-- nasa earth dataset (largest collection of geo-related datasets about the earth, climate and water bodies.)
-- AWS opendata 
-- Azure opendata
+# Datasets
+
+Datasets are imperative to train AI models and access to quality data is always demanding. Below you can find the public datasets and search engines. There are several private datasets as well but they come with a cost.
+
+
+- [Google Dataset Search](https://datasetsearch.research.google.com/)
+- [Kaggle Dataset Search](https://www.kaggle.com/datasets/)
+- [NASA Earth Dataset](https://www.earthdata.nasa.gov/): Largest collection of geo-related datasets about the earth, climate and water bodies.
+- [AWS Opendata](https://registry.opendata.aws/) 
+- [Azure opendata](https://docs.microsoft.com/en-us/azure/open-datasets/dataset-catalog)
 - data.world
 - UCI ML dataset
 - datahub.io

@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: <SUBDOMAIN>-ai
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /ai/$2
+    cert-manager.io/issuer: letsencrypt-<ENV>
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: <SUBDOMAIN>.dpschool.app
+      http:
+        paths:
+          - path: /ai(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: ai
+                port:
+                  number: 8000
+  tls:
+    - hosts:
+        - <SUBDOMAIN>.dpschool.app
+      secretName: <SUBDOMAIN>-certificate

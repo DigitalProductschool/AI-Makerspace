@@ -25,7 +25,6 @@ Abstractive Text Summarizer Project
 
 - Python3
 - git
-- Docker desktop
 
 ### Project Steps
 

@@ -25,9 +25,6 @@ Abstractive Text Summarizer Project
 
 - Python3
 - git
-- [Pack](https://buildpacks.io/docs/tools/pack/)
-- Docker desktop
-
 
 ### Project Steps
 

@@ -68,7 +68,7 @@ dvc repro
 ```
 Add remote storage for DVC projects.
  ```bash
-dvc remote add -d 
+dvc remote add -d 'folder-name' gdrive://
 ```
 Uploads and Downloads data to and from remote storage.
  ```bash

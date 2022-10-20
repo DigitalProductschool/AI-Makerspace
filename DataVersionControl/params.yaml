@@ -1,0 +1,4 @@
+filter:
+  value: 20 #means filter all the records where temp> 20
+training:
+  num_rows: 3

@@ -50,11 +50,14 @@ Makes DVC aware of the target data and start versioning it.
 dvc add kaggle-merged-data/GlobalLand-MainTemperatures.csv
 ```
 Helper for creating or updating pipeline stages.
- ```bash 
+```bash 
 dvc run -n filter -d filter.py -d kaggle-merged-data/GlobalLand-MainTemperatures.csv -p filter.value -o output/filter python filter.py
+```
 
+```bash 
 dvc run -n training -p training.num_rows -d training.py -d output/filter -d kaggle-merged-data/GlobalLand-MainTemperatures.csv -o output/training python training.py output/filter
 ```
+
 Visualizes pipelines as one or more stage dependency graphs.
  ```bash
 dvc dag

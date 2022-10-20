@@ -1,0 +1,4 @@
+outs:
+- md5: 9eef2b1eabad95a763fbc149dde7dab5
+  size: 14588
+  path: GlobalLand-MainTemperatures.csv

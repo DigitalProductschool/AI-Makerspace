@@ -4,4 +4,4 @@ pandas==1.4.2
 uvicorn==0.17.6
 gunicorn==20.1.0
 transformers==4.19.4
-torch==1.11.0
+torch==1.12.0

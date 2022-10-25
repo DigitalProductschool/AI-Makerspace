@@ -32,9 +32,9 @@ Text Generator Project
 git clone https://github.com/DigitalProductschool/AI-Makerspace.git
 ```
 
-- `Step 2`: Changing working directory to HuggingFace/Spaces
+- `Step 2`: Changing working directory to TextAutocomplete-Streamlit
 
-````bash
+```bash
 cd AI-Makerspace/HuggingFace/TextAutocomplete-Streamlit
 ```
 
@@ -42,7 +42,7 @@ cd AI-Makerspace/HuggingFace/TextAutocomplete-Streamlit
 
 ```bash
 pip3 install -r requirements.txt
-````
+```
 
 - `Step 4`: Running the streamlit web app
 

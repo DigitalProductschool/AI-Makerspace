@@ -1,15 +1,3 @@
----
-title: Text Auto Complete [Gpt Neo](https://huggingface.co/EleutherAI/gpt-neo-125M)
-emoji: 💻
-colorFrom: green
-colorTo: green
-sdk: streamlit
-sdk_version: 1.10.0
-app_file: app.py
-pinned: false
-license: openrail
----
-
 # Text Autocomplete using HuggingFace
 
 Text Autocomplete, or text generation, is a task in which an application can fill in incomplete text or paraphrase.

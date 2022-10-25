@@ -1,4 +1,4 @@
-# Text Autocomplete using HuggingFace
+# Text Autocomplete using HuggingFace 🤗
 
 Text Autocomplete, or text generation, is a task in which an application can fill in incomplete text or paraphrase.
 

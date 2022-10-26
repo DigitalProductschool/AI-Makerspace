@@ -34,10 +34,10 @@ Abstractive Text Summarizer Project
 git clone https://github.com/DigitalProductschool/AI-Makerspace.git
 ```
 
-- `Step 2`: Changing working directory to HuggingFace
+- `Step 2`: Changing working directory to TextSummarizer-FastAPI
 
 ```bash
-cd AI-Makerspace/HuggingFace/
+cd AI-Makerspace/HuggingFace/TextSummarizer-FastAPI
 ```
 
 - `Step 3`: Installing dependencies using pip3

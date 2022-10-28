@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://image.flaticon.com/icons/svg/2927/2927647.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <title>Cryotherapy Success Rate | ML model</title>
+  </head>
+
+  <body>
+    <div class="container" id="homePage">
+      <h4 class="center">Cryotherapy Success Rate Prediction</h4>
+      <div class="input-field" id="forminput">
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <label for="sex"> Select Gender </label>
+            <select id="sex" class="browser-default" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+          </div>
+          <div class="col s12 m6 l6">
+            <label for="age"> Enter your Age </label>
+            <input type="text" name="age" id="age" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <label for="time">
+              Time elapsed before starting treatment (months)
+            </label>
+            <input type="text" name="time" id="time" required />
+          </div>
+          <div class="col s12 m6 l6">
+            <label for="wartz"> Number of Wartz (count) </label>
+            <input type="text" name="wartz" id="wartz" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <label for="type"> Type of Wartz </label>
+            <select id="type" class="browser-default" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Type-1 (Common)</option>
+              <option value="2">Type-2 (Plantar)</option>
+              <option value="3">Type-3 (Both)</option>
+            </select>
+          </div>
+          <div class="col s12 m6 l6">
+            <label for="area"> Surface area of the largest wartz (mm²) </label>
+            <input type="text" name="area" id="area" required />
+          </div>
+        </div>
+      </div>
+      <p class="center-align">
+        <a class="waves-effect waves-light btn" onclick="show()">Check</a>
+      </p>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="//unpkg.com/brain.js"></script>
+    <script src="src/js/app.js"></script>
+
+    <script>
+      function show() {
+        let sexv = document.getElementById("sex").value;
+        let agev = document.getElementById("age").value;
+        let timev = document.getElementById("time").value;
+        let wartzv = document.getElementById("wartz").value;
+        let typev = document.getElementById("type").value;
+        let areav = document.getElementById("area").value;
+
+        if (
+          sexv == "" ||
+          agev == "" ||
+          timev == "" ||
+          wartzv == "" ||
+          typev == "" ||
+          areav == ""
+        )
+          return M.toast({ html: "Please Enter all the values" });
+
+        let object_to_predict = {
+          sex: sexv,
+          age: agev,
+          time: timev,
+          wartz: wartzv,
+          type: typev,
+          area: areav,
+        };
+        const output = net.run(object_to_predict).Result_of_Treatment;
+        const final_result = (output * 100).toFixed(2);
+        const toastHTML = "<span>Success Rate: " + final_result + " %</span>";
+        return M.toast({ html: toastHTML });
+      }
+    </script>
+  </body>
+</html>

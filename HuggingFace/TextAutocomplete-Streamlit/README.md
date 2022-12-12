@@ -52,11 +52,3 @@ streamlit run app.py
 
 #### Now go to http://localhost:8501/ to test out this streamlit web-app
 
-### References:
-
-<a href='https://arxiv.org/abs/1705.06830' target='_blank'>1. Exploring the structure of a real-time, arbitrary neural artistic stylization network</a>
-
-<a href='https://www.tensorflow.org/hub/tutorials/tf2_arbitrary_image_stylization' target='_blank'>2. Tutorial to implement Fast Neural Style Transfer using the pretrained model from TensorFlow Hub</a>
-
-<a href='https://huggingface.co/spaces/luca-martial/neural-style-transfer' target='_blank'>3. The idea to build a neural style transfer application was inspired from this Hugging Face Space </a>
-

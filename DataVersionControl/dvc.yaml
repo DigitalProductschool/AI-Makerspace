@@ -1,0 +1,20 @@
+stages:
+  filter:
+    cmd: python filter.py
+    deps:
+    - filter.py
+    - kaggle-merged-data/GlobalLand-MainTemperatures.csv
+    params:
+    - filter.value
+    outs:
+    - output/filter
+  training:
+    cmd: python training.py output/filter
+    deps:
+    - kaggle-merged-data/GlobalLand-MainTemperatures.csv
+    - output/filter
+    - training.py
+    params:
+    - training.num_rows
+    outs:
+    - output/training

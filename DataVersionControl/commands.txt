@@ -1,0 +1,29 @@
+git init
+
+dvc init
+
+dvc add kaggle-merged-data/GlobalLand-MainTemperatures.csv
+
+dvc run --force \
+-n filter \                         
+-d filter.py -d kaggle-merged-data/GlobalLand-MainTemperatures.csv \ 
+-p filter.value \  
+-o output/filter \  
+python3 filter.py
+
+dvc run --force \
+-n training \  
+-p training.num_rows \  
+-d training.py -d output/filter -d kaggle-merged-data/GlobalLand-MainTemperatures.csv \
+-o output/training \
+python3 training.py output/filter
+
+
+dvc dag
+
+
+
+dvc run -n filter -d filter.py -d kaggle-merged-data/GlobalLand-MainTemperatures.csv -p filter.value -o output/filter python filter.py
+
+dvc run -n training -p training.num_rows -d training.py -d output/filter -d kaggle-merged-data/GlobalLand-MainTemperatures.csv -o output/training python training.py output/filter
+

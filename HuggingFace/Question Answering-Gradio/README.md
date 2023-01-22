@@ -11,23 +11,53 @@ In this project we are buidling **question-answering system** **gradio** web-app
 ```bash
 Question Answering-Gradio
 
-├── Huggingface_Gradio_Workshop_DPS.ipynb
+├── app.py
+├── requirements.txt
 
 ```
 
-### Project Requirements
-
-- A Google account, to access the Colab notebook
-
 ### Project Steps
 
-- `Step 1`: Open the [Colab notebook](link-to-colab-notebook) in Google Colab by clicking on the link.
+To get Gradio running with a simple "Hello, World" example, follow these three steps:
 
-- `Step 2`: Make a copy of the notebook by going to "File" > "Save a copy in Drive".
+1\. Clone the repository:
 
-- `Step 3`: Run the code in the notebook by clicking on the play button or pressing Shift+Enter.
+```bash
+git clone https://github.com/DigitalProductschool/AI-Makerspace.git
 
-- `Step 4`: Once you have your model ready and running, you get a web link of the app deployed on Gradio servers.
+```
+2\. Changing working directory to Question Answering-Gradio:
 
+```bash
+cd AI-Makerspace/HuggingFace/Question Answering-Gradio
 
+```
+
+3\. Create a virtual environment for your project:
+
+```bash
+python -m venv venv
+
+```
+4\. Activate the virtual environment:
+
+```bash
+cd venv/Scripts
+./activate
+
+```
+
+5\. Install the pre-requisites using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+6\. Run the code app.py as a Python script or in a [Google Colab](https://github.com/sanaghani12/AI-Makerspace/blob/Gradio-HuggingFace/HuggingFace/Question%20Answering-Gradio/Huggingface_Gradio_Workshop_DPS.ipynb):
+
+```bash
+py .\app.py
+```
+
+7\. The demo below will appear automatically within the Colab Notebook, or pop in a browser on [http://localhost:7860](http://localhost:7860) if running from a script:
 #### Now go to the web link to test out this gradio web-app

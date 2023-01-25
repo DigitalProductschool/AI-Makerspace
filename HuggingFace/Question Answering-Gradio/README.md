@@ -56,7 +56,7 @@ pip install -r requirements.txt
 6\. Run the code app.py as a Python script or in a [Google Colab](https://github.com/sanaghani12/AI-Makerspace/blob/Gradio-HuggingFace/HuggingFace/Question%20Answering-Gradio/Huggingface_Gradio_Workshop_DPS.ipynb):
 
 ```bash
-py .\app.py
+python .\app.py
 ```
 
 7\. The demo below will appear automatically within the Colab Notebook, or pop in a browser on [http://localhost:7860](http://localhost:7860) if running from a script:

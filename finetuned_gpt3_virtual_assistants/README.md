@@ -36,6 +36,12 @@ finetuned_gpt3_virtual_assistants/
 
 To use the OpenAI API, you will need an API key. You can sign up for a free API key at https://beta.openai.com/.
 
+## Datasets
+
+The Kaggle's `Mental Health FAQ for Chatbot` dataset which consists of FAQs about mental health can be found <a href='https://www.kaggle.com/datasets/narendrageek/mental-health-faq-for-chatbot'>`here`</a>.
+
+This dataset contains questions and answeres about mental health which can be used for promt-completion pair corresponding to the training data.
+
 ## Usage:
 
 1. Clone this repository to your local machine:
@@ -101,7 +107,7 @@ description = Dr. Bot is a friendly and helpful virtual mental health assistant 
 python flask_app.py -c assistant_config.ini
 ```
 
-10. Open a web browser and go to http://localhost:5000 to access the chatbot interface.
+9. Open a web browser and go to http://localhost:5000 to access the chatbot interface.
 
 
 ## Contact

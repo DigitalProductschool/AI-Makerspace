@@ -1,0 +1,59 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py data/data.xml
+    deps:
+    - data/data.xml
+    - src/prepare.py
+    params:
+    - prepare.seed
+    - prepare.split
+    outs:
+    - data/prepared
+  featurize:
+    cmd: python src/featurization.py data/prepared data/features
+    deps:
+    - data/prepared
+    - src/featurization.py
+    params:
+    - featurize.max_features
+    - featurize.ngrams
+    outs:
+    - data/features
+  train:
+    cmd: python src/train.py data/features model.pkl
+    deps:
+    - data/features
+    - src/train.py
+    params:
+    - train.min_split
+    - train.n_est
+    - train.seed
+    outs:
+    - model.pkl
+  # evaluate:
+  #   cmd: python src/evaluate.py model.pkl data/features
+  #   deps:
+  #   - data/features
+  #   - model.pkl
+  #   - src/evaluate.py
+  #   metrics:
+  #   - scores.json:
+  #       cache: false
+  #   plots:
+  #   - prc.json:
+  #       cache: false
+  evaluate:
+    cmd: python src/evaluate.py model.pkl data/features
+    deps:
+    - data/features
+    - model.pkl
+    - src/evaluate.py
+    outs:
+    - eval/importance.png
+    - eval/live/plots:
+        cache: false
+    - eval/prc:
+        cache: false
+    metrics:
+    - eval/live/metrics.json:
+        cache: false

@@ -25,3 +25,20 @@ In the workshop we discussed <a href='https://pycaret.gitbook.io/docs/'>`classif
 16. <a href='https://docs.streamlit.io/'>`streamlit`</a> - This will allow easy web app creation.
 
 `Note` - All the headings mentioned above are hyperlinks to their respective official documentation.
+
+### Model API:
+Here we are using `FastAPI` framework to create a custom API for our loan classification model. Two files are added to the dir that belongs to API logic devlopment and call; `main.py` and `call.py`.
+
+The `main.py` follows the following structure:
+
+1. Import dependencies.
+2. Create FastAPI Instance.
+3. Define Root Function.
+4. Create Model Class using Pydantic's BaseModel.
+5. Load AI Models.
+6. Create `/loans` path operation or route.
+7. Show Auto documentation options in FastAPI.
+8. Test `/loans` using Thunder Client on GitPod.
+9. Create `/loans/{version}` path parameter.
+10. Test `/loans/{version}` using Thunder Client on GitPod. 
+11. Explain importance of operation order with `/loans/greetings` path parameter.

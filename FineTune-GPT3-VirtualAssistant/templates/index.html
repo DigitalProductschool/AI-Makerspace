@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPT-3 Virtual Assistant</title>
+    <style>
+    .description-class {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="conversation">
+    </div>
+    <form id="prompt-form">
+      <label for="prompt">Enter your prompt:</label>
+      <br>
+      <textarea name="prompt" id="prompt" rows="4" cols="50"></textarea>
+      <br>
+      <input type="submit" value="Get Response">
+    </form>
+    <div id="description" class="description-class">{{ description }}</div>
+    <script>
+        var assistant_name = "{{ assistant_name }}";
+        document.querySelector("#prompt-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var prompt = document.querySelector("#prompt").value;
+        document.querySelector("#conversation").innerHTML += "<p>User: " + prompt + "</p>";
+        document.querySelector("#prompt").value = "";
+        fetch("/send_prompt", {
+          method: "POST",
+          body: JSON.stringify({prompt: prompt}),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(response) {
+          document.querySelector("#conversation").innerHTML += "<p>"+ assistant_name +": " + response + "</p>";
+        });
+      });
+    </script>
+  </body>
+</html>

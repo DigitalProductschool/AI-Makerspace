@@ -3,75 +3,36 @@ In short, it provides a natural language API on top of transformers: It has defi
 
 For this repo, I have added the following capabilities:-
 - Image Generation
-- 
-
-## Requirements
-
-```console
-$ pip install requests
-```
-
-### Assembly AI Installation
-If you have Homebrew
-```console
-$ brew tap assemblyai/assemblyai
-$ brew install assemblyai
-```
-
-If you don't have Homebrew
-```console
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AssemblyAI/assemblyai-cli/main/install.sh)"
-```
+- Image Caption Generation
+- Text to Speech
+- PDF Document Question Answering
+- Translation
+- Summary of link
 
 ## How to Run
 
-Set API Key as an environment variable
+### Installations
+Run the following command to install all project requirements.
 ```console
-$ export AAI_API_KEY=<YOUR_API_KEY>
+$ pip install -r requirements.txt
 ```
 
-`NOTE` You can get your API Key after signing in to your Assembly AI account and viewing the Dashboard
-
-If your AssemblyAI API key is stored as an environment variable called `AAI_API_KEY` file, then you can omit the optional `--api_key` argument.
-
+### Add HuggingFace Token
+1. Get the token on your profile page on HuggingFace
+2. Open `main.py`
+3. Add your token to the following line in the code as an argument to `login`
 ```console
-$ python transcribe.py audio_file [--local] [--api_key=<YOUR-API-KEY>]
+login("<Insert HuggingFace Token>")
 ```
 
-Example for hosted file:
-
+### Run the Python file
+Run `main.py` using command line
 ```console
-$ python transcribe.py https://bit.ly/3qDXLG8 [--api_key=<YOUR-API-KEY>]
+$ python main.py
 ```
 
-Example for local file:
-
+`NOTE:` For 'Image Generation' and 'Translation', I am generating the code which will give the output for these features. This is due to my lack of computational resources. If you don't have this challenge, search for the following statement in `main.py`
 ```console
-$ python transcribe.py audio.mp3 --local [--api_key=<YOUR-API-KEY>]
+return_code=True
 ```
-
-## Sample Output
-As mentioned above, this program only gives output for the Summarization, Entity Detection and Sentiment Analysis features of Assembly AI.
-
-```
-Here is the summary for the input transcript:
-AssemblyAI is a deep learning company that builds powerful APIs to help you transcribe and understand audio. The most common use case for the API is to automatically convert prerecorded audio and video files into text transcriptions. Every day, developers are using these features to build really exciting applications.
-
-The following table represents all entities present in the transcript:
-    entity_type                        text  count
-0         event          State of the Union      1
-1         event  State of the Union address      4
-2    occupation                        deep      1
-3    occupation                  developers      1
-4  organization                          AI      1
-5  organization                  AssemblyAI      3
-6  organization          team of developers      1
-7   person_name                       Biden      2
-8   person_name                   Joe Biden      1
-
-The following represents a count of sentences in the transcript with a sentiment:
-  sentiment  count
-0  NEGATIVE      1
-1   NEUTRAL     12
-2  POSITIVE      9
-```
+Remove this argument from the function call and the features will run normally after!

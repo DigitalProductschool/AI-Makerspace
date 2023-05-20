@@ -53,7 +53,7 @@ cd venv/Scripts
 pip install -r requirements.txt
 ```
 
-6\. Run the code app.py as a Python script or in a [Google Colab](https://github.com/sanaghani12/AI-Makerspace/blob/Gradio-HuggingFace/HuggingFace/Question%20Answering-Gradio/Huggingface_Gradio_Workshop_DPS.ipynb):
+6\. Run the code app.py as a Python script or in a [Google Colab](https://github.com/sanaghani12/AI-Makerspace/blob/TextEmotionDetection-Gradio/HuggingFace/TextEmotionDetection-Gradio/TextEmotionDetection-Gradio.ipynb):
 
 ```bash
 py .\app.py

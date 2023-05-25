@@ -10,7 +10,7 @@ examples = [
 
 interface = gr.Interface.load("huggingface/bhadresh-savani/bert-base-go-emotion",
             title=title,
-            description=descrition,
+            description=description,
             examples = examples
 )
 

@@ -1,0 +1,6 @@
+plotly==5.3.1
+streamlit==1.22.0
+requests==2.26.0
+python-dotenv==0.19.1
+protobuf==3.20.*
+altair<5

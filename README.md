@@ -8,28 +8,28 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 :octocat: Each folder of our GitHub repository is self-explanatory for using the blueprint templates of selected technologies and AI use cases. Here is the list of some of the tools, platforms, and applications that we have explored:
 
 ### Platforms
-- HuggingFace
-- GKE-Autopilot
-- Heroku
-- CloudRun
-- VertexAI
-- FastAPI
-- AWS SageMaker
-- Tableau
+1. HuggingFace
+2. GKE-Autopilot
+3. Heroku
+4. CloudRun
+5. VertexAI
+6. FastAPI
+7. AWS SageMaker
+8. Tableau
 
 ### Tools and Frameworks
-- GPT-J
-- OpenAI GPT
-- Streamlit
-- Gradio
-- PyCaret
-- Data Version Control
-- Docker
-- Assembly AI
-- PyTorch
-- TensorFlow
-- Flask
-- Microservices
+1. GPT-J
+2. OpenAI GPT
+3. Streamlit
+4. Gradio
+5. PyCaret
+6. Data Version Control
+7. Docker
+8. Assembly AI
+9. PyTorch
+10. TensorFlow
+11. Flask
+12. Microservices
 
 ### Applications
 

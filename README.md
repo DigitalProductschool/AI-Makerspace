@@ -39,7 +39,7 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 4. Offensive speech detection
 5. Keyword extraction
 6. PDF question-answering
-7. Translation
+7. Text translation
 8. Text auto-completion
 9. Text to Speech
 10. Summarization

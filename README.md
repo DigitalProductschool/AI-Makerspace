@@ -18,7 +18,7 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 8. Tableau
 
 ### Tools and Frameworks
-1. GPT-J
+1. Open Source LLM
 2. OpenAI GPT
 3. Streamlit
 4. Gradio

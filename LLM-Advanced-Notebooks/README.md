@@ -19,11 +19,18 @@ This folder contains advanced notebooks focusing on Large Language Models (LLMs)
 
 ### Fine-Tuning
 1. [Fine-Tune-LLaMA-2-with-QLoRA.ipynb](./Fine-Tune-LLaMA2-with-QLoRA.ipynb)
+   - **Author**: [Matt Shumer](https://twitter.com/mattshumer_)
+   
 2. [Fine-Tune-LLaMMA2-on-Sagemaker.ipynb](./Fine-Tune-LLaMMA2-on-Sagemaker.ipynb)
+   - **Source**: [philschmid/sagemaker-huggingface-llama-2-samples](https://github.com/philschmid/sagemaker-huggingface-llama-2-samples)
+
 
 ### Retriever-Augmented Generation (RAG)
 3. [BarbenHeimer-Review-RAG-with-AIMS-and-Deci.ipynb](./BarbenHeimer-Review-RAG-with-AIMS-and-Deci.ipynb)
+   - **Source**: [YouTube Video - RAG with Llama 2 and LangChain](https://www.youtube.com/watch?v=VpbMUSPRJmY&t)
 4. [Graph-RAG-LlamaIndex-Workshop.ipynb](./Graph-RAG-LlamaIndex-Workshop.ipynb)
+   - **Source**: [YouTube Video - LlamaIndex Workshop: Building RAG with Knowledge Graphs](https://www.youtube.com/watch?v=hb8uT-VBEwQ)
 
 ### Multi-Document Querying
 5. [Through-the-LangChain-Looking-Glass.ipynb](./Through-the-LangChain-Looking-Glass.ipynb)
+   - **Source**: [YouTube Video - LangChain: How to Build a Multi-Document QA Chatbot with Agent Memory](https://www.youtube.com/watch?v=k-Yyy6iYKQ4&t)

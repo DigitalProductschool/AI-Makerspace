@@ -11,7 +11,7 @@ This repository contains the code for deploying **[Falcon-7B-Instruct 🦅](http
 
 ## Deployment Architecture
 
-![Deployment Architecture](Deployment%20Architecture.webp)
+![Deployment Architecture](Deployment%20Architecture.png)
 _Image source: towardsai.net_
 
 ## Deployment Steps

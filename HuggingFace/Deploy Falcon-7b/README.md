@@ -11,7 +11,8 @@ This repository contains the code for deploying **[Falcon-7B-Instruct 🦅](http
 
 ## Deployment Architecture
 
-![Deployment Architecture](Deployment%20Architecture.png)
+![Deployment Architecture](https://github.com/DigitalProductschool/AI-Makerspace/assets/63813872/0f57e7f9-2fd6-481b-90a5-03cb112ecdc8)
+
 _Image source: towardsai.net_
 
 ## Deployment Steps

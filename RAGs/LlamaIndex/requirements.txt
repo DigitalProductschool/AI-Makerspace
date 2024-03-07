@@ -1,0 +1,6 @@
+streamlit==1.31.1
+python-dotenv==1.0.1
+llama-index==0.9.47
+langchain==0.1.6
+qdrant_client==1.7.3
+pypdf==4.0.1

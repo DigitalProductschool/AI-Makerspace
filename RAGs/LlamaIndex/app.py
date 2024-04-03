@@ -1,13 +1,6 @@
 
-"""
-Workshop Transcript Chatbot Application
-
-This Streamlit application uses LlamaIndex to create a chatbot that processes and answers questions based on workshop transcripts.
-It loads and indexes transcripts from a specified directory and utilizes LlamaIndex's chat engine to augment GPT-3.5 responses with the context from these transcripts.
-"""
-
 import streamlit as st
-from llama_index import(
+from llama_index.core import(
     SimpleDirectoryReader,
     VectorStoreIndex,
     ServiceContext,
@@ -15,33 +8,31 @@ from llama_index import(
     get_response_synthesizer,
     StorageContext
 )
-from llama_index.llms import OpenAI
-from llama_index.embeddings import OpenAIEmbedding
-from dotenv import load_dotenv
-import tempfile
-import os
-from llama_index.retrievers import VectorIndexRetriever
-from llama_index.query_engine import RetrieverQueryEngine
-from llama_index.langchain_helpers.agents import (
-    IndexToolConfig,
-    LlamaIndexTool,
-)
+from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
 
-from llama_index.ingestion import IngestionPipeline
-from llama_index.text_splitter import SentenceSplitter
-from llama_index.extractors import (
-    TitleExtractor,
-    QuestionsAnsweredExtractor,
-    SummaryExtractor,
-    KeywordExtractor,
-    EntityExtractor
-)
-from llama_index.schema import MetadataMode
+from llama_index.core.retrievers import VectorIndexRetriever
+from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.langchain_helpers.agents import IndexToolConfig, LlamaIndexTool
+#from llama_index.ingestion import IngestionPipeline
+#from llama_index.text_splitter import SentenceSplitter
+#from llama_index.extractors import (
+ #   TitleExtractor,
+ #   QuestionsAnsweredExtractor,
+ #   SummaryExtractor,
+ #   KeywordExtractor,
+ #   EntityExtractor
+#)
+#from llama_index.schema import MetadataMode
 from llama_index.vector_stores.qdrant import QdrantVectorStore
+from llama_index.postprocessor.cohere_rerank import CohereRerank
 import qdrant_client
 from langchain.memory import ConversationBufferMemory
 import time
 import nest_asyncio
+from dotenv import load_dotenv
+import tempfile
+import os
 
 nest_asyncio.apply()
 #import openai
@@ -59,7 +50,8 @@ vector_store = QdrantVectorStore(client=client, collection_name="test_store")
 
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
-
+cohere_api_key = os.getenv("COHERE_API_KEY")
+cohere_rerank = CohereRerank(api_key=cohere_api_key, top_n=2)
 
 # Set the header of the Streamlit application
 st.header("Workshop Transcript Chatbot")
@@ -129,7 +121,7 @@ if uploaded_files:
         query_engine = RetrieverQueryEngine(
             retriever=retriever,
             response_synthesizer=response_synthesizer,
-            )
+            node_postprocessors=[cohere_rerank])
 
 
         memory = ConversationBufferMemory(

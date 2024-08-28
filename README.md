@@ -54,6 +54,6 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 
 :boom: In addition, you can find our curated list of resources to help AI prototyping on our Wiki page: [Curated AI Resources](https://github.com/DigitalProductschool/AI-Makerspace/wiki/Welcome-to-Curated-AI-Resources!-%F0%9F%9A%80)
 
-📫 For any questions and if you are interested to collaborate, fill out this [application form](https://forms.gle/2Yh1DNZyR97f5w4q6).
+📫 For any questions and if you are interested in receiving our exclusive community offers, fill out this [application form](https://forms.gle/2Yh1DNZyR97f5w4q6).
 
 Enjoy & Rock!

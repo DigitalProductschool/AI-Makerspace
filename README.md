@@ -16,6 +16,7 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 6. FastAPI
 7. AWS SageMaker
 8. Tableau
+9. CrewAI
 
 ### Tools and Frameworks
 1. Open Source LLM

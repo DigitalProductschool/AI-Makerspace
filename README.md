@@ -16,6 +16,7 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 6. FastAPI
 7. AWS SageMaker
 8. Tableau
+9. CrewAI
 
 ### Tools and Frameworks
 1. Open Source LLM
@@ -33,26 +34,27 @@ AI Makerspace repository is a hub of blueprint templates for using state-of-the-
 
 ### Applications
 
-1. 3D Maps, AR & 3D Geo AI interactive applications
-2. Chatbot 
-3. Emotion detection
-4. Offensive speech detection
-5. Keyword extraction
-6. PDF question-answering
-7. Text translation
-8. Text auto-completion
-9. Text to Speech
-10. Summarization
-11. Speech recognition
-12. Image Generation
-13. Image Caption Generation
-14. Neural style transfer
-15. Synthetic data generation
-16. Accident prediction
+1. Retrieval-Augmented Generation (RAG)
+2. 3D Maps, AR & 3D Geo AI interactive applications
+3. Chatbot 
+4. Emotion detection
+5. Offensive speech detection
+6. Keyword extraction
+7. PDF question-answering
+8. Text translation
+9. Text auto-completion
+10. Text to Speech
+11. Summarization
+12. Speech recognition
+13. Image Generation
+14. Image Caption Generation
+15. Neural style transfer
+16. Synthetic data generation
+17. Accident prediction
 
 
 :boom: In addition, you can find our curated list of resources to help AI prototyping on our Wiki page: [Curated AI Resources](https://github.com/DigitalProductschool/AI-Makerspace/wiki/Welcome-to-Curated-AI-Resources!-%F0%9F%9A%80)
 
-📫 For any questions and if you are interested to collaborate, fill out this [application form](https://forms.gle/2Yh1DNZyR97f5w4q6).
+📫 For any questions and if you are interested in receiving our exclusive community offers, fill out this [application form](https://forms.gle/2Yh1DNZyR97f5w4q6).
 
 Enjoy & Rock!

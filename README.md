@@ -5,6 +5,8 @@ Advances in innovation of AI tools and technologies enable us to solve problems 
 
 AI Makerspace repository is a hub of blueprint templates for using state-of-the-art technologies in the rapid prototyping of AI use cases. Working closely with cross-functional innovation teams at [Digital Product School](https://digitalproductschool.io/) of [UnternehmerTUM](https://www.unternehmertum.de/en), we guide the teams through AI Design Thinking/Engineering, Lean AI Engineering, Explainable AI (XAI), Responsible and Ethical AI, as well as User Experience (UX) of machine learning products. 
 
+In addition, we are on an exciting journey to develop scalable coaching solutions through our 🚀 [Agentic AI Coaching platform](https://github.com/DigitalProductschool/AgenticAICoach) 🚀, and we warmly invite you to contribute and be a part of this initiative.
+
 :octocat: Each folder of our GitHub repository is self-explanatory for using the blueprint templates of selected technologies and AI use cases. Here is the list of some of the tools, platforms, and applications that we have explored:
 
 ### Platforms

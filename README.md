@@ -1,5 +1,5 @@
 # [AI Makerspace](https://github.com/DigitalProductschool/AI-Makerspace) 
-## We support rapid prototyping of user-centered AI applications. 🚀
+## We support rapid prototyping of user-centered AI applications. 🤝
 
 Advances in innovation of AI tools and technologies enable us to solve problems faster, easier, and more effectively. As the technologies grow in complexity and diversity, we experience a growing need for guiding innovation teams through rapid  prototyping and user-centred development. 
 

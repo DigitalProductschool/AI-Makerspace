@@ -20,7 +20,7 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 9. Tableau
 
 ### Tools and Frameworks
-1. CrewAI
+1. CrewAI for building multi-agent systems 
 2. Open Source LLM
 3. OpenAI GPT
 4. Streamlit
@@ -33,6 +33,7 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 11. TensorFlow
 12. Flask
 13. Microservices
+14. Agno for building multi-modal agents
 
 ### Applications
 

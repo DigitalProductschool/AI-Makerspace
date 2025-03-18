@@ -38,23 +38,24 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 ### Applications
 
 1. [Agentic AI Coaching](https://github.com/DigitalProductschool/AgenticAICoach)
-2. Retrieval-Augmented Generation (RAG)
-3. 3D Maps, AR & 3D Geo AI interactive applications
-4. Chatbot 
-5. Emotion detection
-6. Offensive speech detection
-7. Keyword extraction
-8. PDF question-answering
-9. Text translation
-10. Text auto-completion
-11. Text to Speech
-12. Summarization
-13. Speech recognition
-14. Image Generation
-15. Image Caption Generation
-16. Neural style transfer
-17. Synthetic data generation
-18. Accident prediction
+2. Rapid Prototyping Agent: Tool Research and Use Case Coding Assistant
+3. Retrieval-Augmented Generation (RAG)
+4. 3D Maps, AR & 3D Geo AI interactive applications
+5. Chatbot 
+6. Emotion detection
+7. Offensive speech detection
+8. Keyword extraction
+9. PDF question-answering
+10. Text translation
+11. Text auto-completion
+12. Text to Speech
+13. Summarization
+14. Speech recognition
+15. Image Generation
+16. Image Caption Generation
+17. Neural style transfer
+18. Synthetic data generation
+19. Accident prediction
 
 
 :boom: In addition, you can find our curated list of resources to help AI prototyping on our Wiki page: [Curated AI Resources](https://github.com/DigitalProductschool/AI-Makerspace/wiki/Welcome-to-Curated-AI-Resources!-%F0%9F%9A%80)

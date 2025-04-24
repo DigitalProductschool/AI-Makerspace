@@ -1,0 +1,5 @@
+<rail version="0.1">
+  <output>
+    <string name="text"/>
+  </output>
+</rail>

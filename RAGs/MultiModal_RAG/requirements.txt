@@ -1,0 +1,16 @@
+streamlit==1.31.1
+llama-parse
+mem0ai
+torch==2.1.2
+llama-index-vector-stores-qdrant
+llama-index-llms-openai
+llama-index-multi-modal-llms-openai
+transformers
+langgraph
+guardrails-ai==0.4.5
+elevenlabs
+pytest
+pymupdf==1.23.21
+reportlab
+llama-index-output-parsers-guardrails
+scikit-learn

@@ -1,0 +1,59 @@
+name = "cloudflare-mcp-template-test"
+main = "build/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Let Wrangler build before dev/publish
+[build]
+command = "npm run build"
+watch_dir = ["src"]
+
+[vars]
+MCP_SERVER_NAME = "template-test"
+
+[observability]
+enabled = true
+
+############################
+## Development environment
+############################
+[env.development]
+name = "cloudflare-mcp-template-test-dev"
+vars = { MCP_SERVER_NAME = "template-dev" }
+
+[env.development.observability]
+enabled = true
+
+# Bind a *dev* KV namespace for OAuth clients
+[[env.development.kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "REPLACE_WITH_DEV_KV_ID"
+
+##########################
+## Staging environment
+##########################
+[env.staging]
+name = "cloudflare-mcp-template-test-staging"
+vars = { MCP_SERVER_NAME = "template-staging" }
+
+[[env.staging.kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "REPLACE_WITH_STAGING_KV_ID"
+
+##########################
+## Production environment
+##########################
+[env.production]
+name = "cloudflare-mcp-template-test"
+vars = { MCP_SERVER_NAME = "template" }
+
+[[env.production.kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "REPLACE_WITH_PRODUCTION_KV_ID"
+
+# Secrets to set per environment (via CLI, not in this file):
+# - API_KEY (provider-specific, optional for example provider)
+# 
+# Authentication: Uses OAuth 2.1 with Dynamic Client Registration (DCR)
+# - Client credentials are automatically generated via /register endpoint
+# - OAuth clients stored in KV namespace (no manual secrets needed)

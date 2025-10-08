@@ -1,0 +1,59 @@
+name = "{{PROJECT_NAME}}"
+main = "build/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Let Wrangler build before dev/publish
+[build]
+command = "npm run build"
+watch_dir = ["src"]
+
+[vars]
+MCP_SERVER_NAME = "{{PROJECT_NAME}}"
+
+[observability]
+enabled = true
+
+############################
+## Development environment
+############################
+[env.development]
+name = "{{PROJECT_NAME}}-dev"
+vars = { MCP_SERVER_NAME = "{{PROJECT_NAME}}-dev" }
+
+[env.development.observability]
+enabled = true
+
+# Bind a *dev* KV namespace for OAuth clients
+[[env.development.kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "REPLACE_WITH_DEV_KV_ID"
+
+##########################
+## Staging environment
+##########################
+[env.staging]
+name = "{{PROJECT_NAME}}-staging"
+vars = { MCP_SERVER_NAME = "{{PROJECT_NAME}}-staging" }
+
+[[env.staging.kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "REPLACE_WITH_STAGING_KV_ID"
+
+##########################
+## Production environment
+##########################
+[env.production]
+name = "{{PROJECT_NAME}}"
+vars = { MCP_SERVER_NAME = "{{PROJECT_NAME}}" }
+
+[[env.production.kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "REPLACE_WITH_PRODUCTION_KV_ID"
+
+# Secrets to set per environment (via CLI, not in this file):
+# - API_KEY (provider-specific, required by your provider)
+# 
+# Authentication: Uses OAuth 2.1 with Dynamic Client Registration (DCR)
+# - Client credentials are automatically generated via /register endpoint
+# - OAuth clients stored in KV namespace (no manual secrets needed)

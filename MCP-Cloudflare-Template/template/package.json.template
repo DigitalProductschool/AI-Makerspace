@@ -1,0 +1,33 @@
+{
+    "name": "{{PROJECT_NAME}}",
+    "version": "1.0.0",
+    "main": "build/worker.js",
+    "type": "module",
+    "scripts": {
+        "build": "npm run inject-version && npm run build-tsc",
+        "build-tsc": "npx tsc",
+        "inject-version": "npx tsx scripts/inject-version.ts",
+        "dev": "wrangler dev",
+        "deploy": "npm run build && npx tsx scripts/deploy.ts development",
+        "deploy:development": "npm run build && npx tsx scripts/deploy.ts development",
+        "deploy:staging": "npm run build && npx tsx scripts/deploy.ts staging", 
+        "deploy:production": "npm run build && npx tsx scripts/deploy.ts production",
+        "format": "biome check --write"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.15.1"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.1.1",
+        "@types/node": "^22.16.4",
+        "tsx": "^4.19.1",
+        "typescript": "^5.8.3"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "cloudflare-workers",
+        "ai"
+    ],
+    "license": "MIT"
+}

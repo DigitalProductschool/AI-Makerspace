@@ -19,23 +19,26 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 7. Cloudflare Workers
 8. AWS SageMaker
 9. Tableau
+11. Claude Code
+12. Claudeflare
 
 ### Tools and Frameworks
-1. CrewAI for building multi-agent systems
-2. Open Source LLM
-3. OpenAI GPT
-4. Streamlit
-5. Gradio
-6. PyCaret
-7. Data Version Control
-8. Docker
-9. Assembly AI
-10. PyTorch
-11. TensorFlow
-12. Flask
-13. Microservices
-14. Agno for building multi-modal agents
-15. Model Context Protocol
+1. MCP
+2. CrewAI for building multi-agent systems
+3. Open Source LLM
+4. OpenAI GPT
+5. Streamlit
+6. Gradio
+7. PyCaret
+8. Data Version Control
+9. Docker
+10. Assembly AI
+11. PyTorch
+12. TensorFlow
+13. Flask
+14. Microservices
+15. Agno for building multi-modal agents
+16. Model Context Protocol
 
 ### Applications
 

@@ -16,11 +16,12 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 4. CloudRun
 5. VertexAI
 6. FastAPI
+7. Cloudflare Workers
 8. AWS SageMaker
 9. Tableau
 
 ### Tools and Frameworks
-1. CrewAI for building multi-agent systems 
+1. CrewAI for building multi-agent systems
 2. Open Source LLM
 3. OpenAI GPT
 4. Streamlit
@@ -34,6 +35,7 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 12. Flask
 13. Microservices
 14. Agno for building multi-modal agents
+15. Model Context Protocol
 
 ### Applications
 
@@ -41,7 +43,7 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 2. Rapid Prototyping Agent: Tool Research and Use Case Coding Assistant
 3. Retrieval-Augmented Generation (RAG)
 4. 3D Maps, AR & 3D Geo AI interactive applications
-5. Chatbot 
+5. Chatbot
 6. Emotion detection
 7. Offensive speech detection
 8. Keyword extraction
@@ -56,6 +58,7 @@ In addition, we are on an exciting journey to develop scalable coaching solution
 17. Neural style transfer
 18. Synthetic data generation
 19. Accident prediction
+20. Serverless MCP servers
 
 
 :boom: In addition, you can find our curated list of resources to help AI prototyping on our Wiki page: [Curated AI Resources](https://github.com/DigitalProductschool/AI-Makerspace/wiki/Welcome-to-Curated-AI-Resources!-%F0%9F%9A%80)

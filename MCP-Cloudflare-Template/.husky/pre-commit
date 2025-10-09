@@ -1,0 +1,1 @@
+docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:latest protect --staged --source="/repo" || { echo "Secret scan failed"; exit 1; }
